@@ -1,0 +1,114 @@
+<%= form_for :order, url: populate_orders_path do |f| %>
+  <div class="row" id="inside-product-cart-form" data-hook="inside_product_cart_form" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+    <% if @product.variants_and_option_values(current_currency).any? %>
+      <div id="product-variants" class="col-md-6">
+        <h3 class="product-section-title"><%= Spree.t(:variants) %></h3>
+        <ul class="list-group">
+          <% @product.variants_and_option_values(current_currency).each_with_index do |variant, index| %>
+            <li>
+              <%= radio_button_tag "variant_id", variant.id, index == 0,
+                  'data-price' => variant.price_in(current_currency).money, 
+                  'data-in-stock' => variant.can_supply?
+              %>
+              <%= label_tag "variant_id_#{ variant.id }" do %>
+                <span class="variant-description">
+                  <%= variant_options variant %>
+                </span>
+                <% if variant_price variant %>
+                  <span class="price diff"><%= variant_price variant %></span>
+                <% end %>
+                <% unless variant.can_supply? %>
+                  <span class="out-of-stock"><%= Spree.t(:out_of_stock) %></span>
+                <% end %>
+              <% end %>
+            </li>
+          <% end%>
+        </ul>
+      </div>
+    <% else %>
+      <%= hidden_field_tag "variant_id", @product.master.id %>
+    <% end %>
+
+
+
+
+    <% if @product.price_in(current_currency) && !@product.price.nil? %>
+      <div data-hook="product_price" class="col-md-5">
+        <div id="product-price">
+          <h3 class="product-section-title"><%= Spree.t(:price) %></h3>
+          <div>
+            <span class="lead price selling" itemprop="price">
+              <%= display_price(@product) %>
+            </span>
+            <span itemprop="priceCurrency" content="<%= @product.currency %>"></span>
+          </div>
+        </div>
+
+        
+        <div>
+          <h3 class="product-section-title">Stock</h3>
+          <div>
+            <span class="lead price selling" itemprop="price">
+              <%= getStockProducto(@product.sku) %>
+            </span>
+            <p></p>
+            <span itemprop="priceCurrency" content="<%= @product.currency %>"></span>
+          </div>
+        </div>
+        
+        <div>
+          <h3>sku</h3>
+          <div>
+          <span class="lead price selling" itemprop="price">
+               <%= @product.sku %>
+            </span>
+          
+          </div>
+         </div>
+         <%= hidden_field_tag "sku", @product.sku %>
+         <div>
+          <h3>Address</h3>
+          <div>
+           <%= text_field_tag :direccion, "Ingrese su direccion", class: 'title form-control' %>
+          </div>
+         </div>
+        <div>
+          <h3>Client's name</h3>
+          <div>
+           <%= text_field_tag :name, "Ingrese su nombre", class: 'title form-control' %>
+          </div>
+         </div>
+            
+        
+        
+        <% if @product.can_supply? %>
+            <div class="add-to-cart">
+              <br />
+              <%= getStockProducto(@product.sku) %>
+              <div class="input-group">
+               
+                <%= number_field_tag :quantity, 1, class: 'title form-control', min: 1, max: getStockProducto(@product.sku) %>
+                <span class="input-group-btn">
+                  <%= button_tag class: 'btn btn-success', id: 'add-to-cart-button', type: :submit do %>
+                    <%= Spree.t(:add_to_cart) %>
+                  <% end %>
+                  <%= button_tag class: 'btn btn-success', id: 'add-to-cart-button', type: :submit do %>
+                  Buy Now
+                <% end %>
+                </span>
+              </div>
+            </div>
+        <% end %>
+      </div>
+    <% else %>
+      <div id="product-price">
+        <br />
+        <div>
+          <span class="price selling" itemprop="price">
+            <%= Spree.t('product_not_available_in_this_currency') %>
+          </span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
