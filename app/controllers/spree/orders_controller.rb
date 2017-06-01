@@ -84,7 +84,7 @@ module Spree
           precio_final = precio_5
         end
 
-        # Para hacerlo regularmente
+        # Asi estaba antes, ahora para probar comprando de una
 
         # respond_with(order) do |format|
         #   format.html { redirect_to cart_path }
@@ -97,14 +97,20 @@ module Spree
 
       respuesta = crearBoleta("590baa00d6b4ec0004902466", cliente, precio_final, quantity)
       
-      # respuesta_model = B2c.create(:cliente => respuesta['cliente'], :proveedor => respuesta['proveedor'], :bruto => respuesta['bruto'], :iva => respuesta['iva'], :total => respuesta['total'], :_id => respuesta['_id'], :estado => respuesta['estado'], :direccion => direccion, :sku => sku, :cantidad => quantity)
-      # puts respuesta_model
 
       puts 'pago respuesta'
       puts respuesta
-      url_ok = "http%3A%2F%2Fintegra5.ing.puc.cl/tienda/ok/"+respuesta['_id']
-      # url_ok = "http%3A%2F%2Fintegra5.ing.puc.cl/tienda/ok/1"
-      url_fail = "http%3A%2F%2Fintegra5.ing.puc.cl/tienda/fail/"
+      
+      #Cuando este arriba
+      #url_ok = "http%3A%2F%2Fintegra5.ing.puc.cl/tienda/ok/"+respuesta['_id']
+      # Ahora para probar con local host
+      url_ok = 'http%3A%2F%2Flocalhost:3000/tienda/ok/'+respuesta['_id']
+      
+      
+      # Cuando este arriba
+      # url_fail = "http%3A%2F%2Fintegra5.ing.puc.cl/tienda/fail/"
+      # Ahora para probar
+      url_fail = 'http%3A%2F%2Flocalhost:3000/tienda/fail/'
       url = "http://integracion-2017-prod.herokuapp.com/web/pagoenlinea?callbackUrl="+url_ok+"&cancelUrl="+url_fail+"+&boletaId="+respuesta['_id']
 
       redirect_to url
@@ -112,64 +118,7 @@ module Spree
     
     end
 
-    # def pagoWeb
-    #   puts 'entre al metodo pago web'
-    #   sleep(5)
-    #   order    = current_order(create_order_if_necessary: true)
-    #   variant  = Spree::Variant.find(params[:variant_id])
-    #   quantity = params[:quantity].to_i
-    #   options  = params[:options] || {}
-    #   direccion = params[:direccion]
-    #   cliente = params[:name]
-    #   sku = params[:sku]
-    #   precio_56 = 1000
-    #   precio_11 = 1000
-    #   precio_17 = 1000
-    #   precio_5 =  1000
-    #   #TODO: Cambiar el precio de venta de los skus
-
-    #   # 2,147,483,647 is crazy. See issue #2695.
-    #   if quantity.between?(1, 2_147_483_647)
-    #     order.contents.add(variant, quantity, options)
-    #     order.update_line_item_prices!
-    #     order.create_tax_charge!
-    #     order.update_with_updater!
-    #   else
-    #     error = Spree.t(:please_enter_reasonable_quantity)
-    #   end
-
-    #   if error
-    #     flash[:error] = error
-    #     redirect_back_or_default(spree.root_path)
-    #   else
-    #     total = 0;
-        
-    #     if(sku.to_i == 56)
-    #       total = precio_56*quantity
-    #     elsif (sku.to_i == 11)
-    #       total = precio_11*quantity
-    #     elsif (sku.to_i == 17)
-    #       total = precio_17*quantity
-    #     else
-    #       total = precio_5*quantity
-    #     end
-    #   end
-    #   #DEV: 590baa00d6b4ec0004902466
-    #   #PROD: 5910c0910e42840004f6e684
-
-    #   #respuesta = crearBoleta("590baa00d6b4ec0004902466", cliente, total)
-      
-    #   #respuesta_model = B2c.create(:cliente => respuesta['cliente'], :proveedor => respuesta['proveedor'], :bruto => respuesta['bruto'], :iva => respuesta['iva'], :total => respuesta['total'], :_id => respuesta['_id'], :estado => respuesta['estado'], :direccion => direccion, :sku => sku, :cantidad => quantity)
-    #   #puts respuesta_model
-
-    #   puts 'pago respuesta'
-    #   #url_ok = "http%3A%2F%2Fintegra5.ing.puc.cl/tienda/ok/"+respuesta['_id']
-    #   url_ok = "http%3A%2F%2Fintegra5.ing.puc.cl/tienda/ok/1"
-    #   url_fail = "http%3A%2F%2Fintegra5.ing.puc.cl/tienda/fail/"
-    #   url = "http://integracion-2017-prod.herokuapp.com/web/pagoenlinea?callbackUrl="+url_ok+"&cancelUrl="+url_fail+"+&boletaId="+respuesta['_id']
-
-    #   redirect_to url
-    # end
+    
     
     def empty
       if @order = current_order
