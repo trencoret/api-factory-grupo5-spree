@@ -100,15 +100,15 @@ module Spree
       puts respuesta["_id"]
       
       #Cuando este arriba
-      #url_ok = "http%3A%2F%2Fintegra5.ing.puc.cl/tienda/ok/"+respuesta['_id']
+      url_ok = "http%3A%2F%2Fintegra5.ing.puc.cl/tienda/ok/"+respuesta['_id']
       # Ahora para probar con local host
-      url_ok = 'http%3A%2F%2Flocalhost:3000/tienda/ok/'+respuesta['_id']
+      # url_ok = 'http%3A%2F%2Flocalhost:3000/tienda/ok/'+respuesta['_id']
       
       
       # Cuando este arriba
-      # url_fail = "http%3A%2F%2Fintegra5.ing.puc.cl/tienda/fail/"
+      url_fail = "http%3A%2F%2Fintegra5.ing.puc.cl/tienda/fail/"
       # Ahora para probar
-      url_fail = 'http%3A%2F%2Flocalhost:3000/tienda/fail/'
+      # url_fail = 'http%3A%2F%2Flocalhost:3000/tienda/fail/'
       url = "http://integracion-2017-prod.herokuapp.com/web/pagoenlinea?callbackUrl="+url_ok+"&cancelUrl="+url_fail+"+&boletaId="+respuesta['_id']
 
       redirect_to url
