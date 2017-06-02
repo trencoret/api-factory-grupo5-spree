@@ -1,0 +1,11 @@
+  [1m[36mSpree::Preference Load (0.4ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1  ORDER BY "spree_preferences"."id" ASC LIMIT 1[0m  [["key", "spree/app_configuration/currency"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSpree::Preference Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "spree_preferences" WHERE ("spree_preferences"."key" = 'spree/app_configuration/currency' AND "spree_preferences"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mSpree::Country Load (0.3ms)[0m  [1mSELECT  "spree_countries".* FROM "spree_countries" WHERE "spree_countries"."name" = $1 LIMIT 1[0m  [["name", "Chile"]]
+  [1m[35mSpree::Preference Load (0.2ms)[0m  SELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1  ORDER BY "spree_preferences"."id" ASC LIMIT 1  [["key", "spree/app_configuration/default_country_id"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSpree::Preference Exists (0.2ms)[0m  SELECT  1 AS one FROM "spree_preferences" WHERE ("spree_preferences"."key" = 'spree/app_configuration/default_country_id' AND "spree_preferences"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_preferences" SET "value" = $1, "updated_at" = $2 WHERE "spree_preferences"."id" = $3[0m  [["value", "--- 46\n...\n"], ["updated_at", "2017-06-02 04:37:53.478359"], ["id", 1]]
+  [1m[35m (2.0ms)[0m  COMMIT
+DEPRECATION WARNING: Spree::User must include Spree::UserMethods. (called from block in tsort_each at /home/ignacio/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:228)
