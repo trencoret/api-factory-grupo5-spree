@@ -95,22 +95,20 @@ module Spree
         #   #DEV: 590baa00d6b4ec0004902466
     #   #PROD: 5910c0910e42840004f6e684
 
-      respuesta = crearBoleta("590baa00d6b4ec0004902466", cliente, precio_final, quantity)
-      
-
+      respuesta = crearBoleta("5910c0910e42840004f6e684", cliente, precio_final, quantity, sku)
       puts 'pago respuesta'
-      puts respuesta
+      puts respuesta["_id"]
       
       #Cuando este arriba
-      #url_ok = "http%3A%2F%2Fintegra5.ing.puc.cl/tienda/ok/"+respuesta['_id']
+      url_ok = "http%3A%2F%2Fintegra5.ing.puc.cl/tienda/ok/"+respuesta['_id']
       # Ahora para probar con local host
-      url_ok = 'http%3A%2F%2Flocalhost:3000/tienda/ok/'+respuesta['_id']
+      # url_ok = 'http%3A%2F%2Flocalhost:3000/tienda/ok/'+respuesta['_id']
       
       
       # Cuando este arriba
-      # url_fail = "http%3A%2F%2Fintegra5.ing.puc.cl/tienda/fail/"
+      url_fail = "http%3A%2F%2Fintegra5.ing.puc.cl/tienda/fail/"
       # Ahora para probar
-      url_fail = 'http%3A%2F%2Flocalhost:3000/tienda/fail/'
+      # url_fail = 'http%3A%2F%2Flocalhost:3000/tienda/fail/'
       url = "http://integracion-2017-prod.herokuapp.com/web/pagoenlinea?callbackUrl="+url_ok+"&cancelUrl="+url_fail+"+&boletaId="+respuesta['_id']
 
       redirect_to url
