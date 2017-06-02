@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   helper_method :getStockProducto
   helper_method :crearBoleta
   helper_method :compraOnline
-  
+
 
   #@url = 'http://localhost:3000/products/5'
   # puts "Esta es la url"
@@ -28,13 +28,13 @@ class ApplicationController < ActionController::Base
 
   def crearBoleta(id,cliente,precio, cantidad)
     url = 'http://localhost:3000/'
-    url_final = url + 'api/boleta' 
-    #Json: #proveedor: id, 
+    url_final = url + 'api/boleta'
+    #Json: #proveedor: id,
     #Falta ingresarle los params
-    
-    response = HTTP.headers(:accept => "application/json").put(url_final, :json => { :proovedor => id, :client => cliente, :precio => precio, :cantidad => cantidad})
-    #end	
-    
+
+    response = HTTP.headers(:accept => "application/json").put(url_final, :json => { :proveedor => id, :cliente => cliente, :precio => precio, :cantidad => cantidad})
+    #end
+
     resultadoEnJson = JSON.parse(response)
     return resultadoEnJson
   end
