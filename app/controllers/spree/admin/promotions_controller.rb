@@ -3,7 +3,7 @@ module Spree
     class PromotionsController < ResourceController
       before_action :load_data
 
-      helper 'spree/admin/promotion_rules'
+      helper 'spree/promotion_rules'
 
       protected
         def location_after_save
