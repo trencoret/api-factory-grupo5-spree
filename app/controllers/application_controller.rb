@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   # puts @url
 
   def getStockProducto(sku)
-    url = 'http://localhost:3000/'
+    url = 'http://integra17-5.ing.puc.cl/'
     carpeta = 'products/'
     url_final = url + carpeta
     # puts 'URL FINAL:'
@@ -35,7 +35,7 @@ class ApplicationController < ActionController::Base
   end
 
   def crearBoleta(id,cliente,precio, cantidad, sku)
-    url = 'http://localhost:3000/'
+    url = 'http://integra17-5.ing.puc.cl/'
     url_final = url + 'api/boleta'
     #Json: #proveedor: id,
     #Falta ingresarle los params
