@@ -4730,3 +4730,136 @@ Processing by Spree::StoreController#cart_link as */*
   Rendered spree/shared/_link_to_cart.html.erb (9.9ms)
   Couldn't find template for digesting: store/cart_link
 Completed 304 Not Modified in 29ms (Views: 15.8ms | ActiveRecord: 1.4ms)
+  [1m[36mSpree::Preference Load (0.4ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1  ORDER BY "spree_preferences"."id" ASC LIMIT 1[0m  [["key", "spree/app_configuration/currency"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSpree::Preference Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "spree_preferences" WHERE ("spree_preferences"."key" = 'spree/app_configuration/currency' AND "spree_preferences"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+DEPRECATION WARNING: Spree::User must include Spree::UserMethods. (called from block in <top (required)> at /home/zuri/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/bundler/gems/spree-5384ab6e8318/core/config/initializers/user_class_extensions.rb:7)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-06-06 16:16:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Spree::UserSessionsController#new as HTML
+  Rendered spree/shared/_login.html.erb (9.4ms)
+  Rendered /home/zuri/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/bundler/gems/spree_auth_devise-c67f50eb317c/lib/views/frontend/spree/user_sessions/new.html.erb within spree/layouts/spree_application (14.0ms)
+  [1m[35mSpree::Store Load (0.4ms)[0m  SELECT  "spree_stores".* FROM "spree_stores" WHERE (url like '%localhost%')  ORDER BY "spree_stores"."id" ASC LIMIT 1
+  Rendered spree/shared/_head.html.erb (932.9ms)
+  Rendered spree/shared/_google_analytics.js.erb (1.9ms)
+[1;32mDeface:[0m 1 overrides found for 'spree/shared/_nav_bar'
+[1;32mDeface:[0m 'auth_shared_login_bar' matched 1 times with 'li#search-bar'
+  [1m[36m (0.6ms)[0m  [1mSELECT MAX("spree_taxons"."updated_at") FROM "spree_taxons" WHERE "spree_taxons"."parent_id" IS NULL[0m
+  [1m[35mSpree::Taxon Load (0.3ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" WHERE "spree_taxons"."parent_id" IS NULL  ORDER BY "spree_taxons"."lft"
+  Rendered spree/shared/_search.html.erb (53.2ms)
+  Rendered spree/shared/_nav_bar.html.erb (55.3ms)
+  Rendered spree/shared/_main_nav_bar.html.erb (0.7ms)
+  Rendered spree/shared/_header.html.erb (66.5ms)
+Completed 200 OK in 1118ms (Views: 1028.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/spree/frontend/frontend_bootstrap.self-a9728b422e2999db389a80e96c0eac028362da71537778d0adb61f0c4aab3ced.css?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/spree/frontend.self-e73dc9de72274c38c22893ab23f2a409bb2001bd63595499790b46cf2f0c3c4a.css?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/spree/frontend/all.self-33fc4a513acb9a5f3fd4ba26b89c94184e5d028c4bd40eee6736d3ccfea5c140.css?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/jquery.payment.self-38d1c43bb5a79a62bce3ec642fe216db420582062f0990bb7ce095fe9698a834.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/jquery.validate/jquery.validate.min.self-ff387f76d0c68bc92a0a0a6167be0413ebd547db067eaf64a95d066e61655518.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/jsuri.self-090126b483ac28538a8bd132dce89500493c079744010067a5e79b94f57c0122.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/spree.self-3537dd0d44b5a6a3e36dc3ddff0668075ec7688b84ef1d78f3d5df3b0880f28b.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/spree/frontend/cart.self-5907be3c192d3104648886d27735864e4fefb1b56db406173d69a5dc2bbc22c3.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/spree/frontend/checkout.self-d127b3baa6b2f6f6585dc009dcff30bfdc6c6c019fae9a6441c2ed2aab4a6b16.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/spree/frontend/checkout/address.self-8b5f80cd1f217bd71389d6fc6b82efc71e9c81d73b46e19a572a9f3377cb769e.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/spree/frontend/checkout/payment.self-712ba3fa8424885a09e537de9921037f5be414366cb6109832d7822798441821.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/spree/frontend/product.self-8e623f7f108f76febb02c47c1d58b5cabf59ab5183893b647375f27398f42f13.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/spree/frontend.self-1e135afb54bf948ed616b7e518ea9f59c8edad95a2d1dfbae8adc60b167c5f6c.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/spree/frontend/account.self-701baa9147339958eb4ccc4bd8e4f199d8b9258dc02a0acf1790c746b0b43b8b.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/spree/frontend/spree_auth.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/spree/frontend/all.self-cb715ade8208ca614adcefe484df803bed6d65b27b52ba06264930b4627dcfd7.js?body=1" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/assets/logo/spree_50-1c7335be355d4672a35c5023956d0c883f254831f3e3dae3f2ca05976ceb5e50.png" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+
+
+Started GET "/cart_link" for 127.0.0.1 at 2017-06-06 16:16:20 -0400
+Processing by Spree::StoreController#cart_link as */*
+  [1m[36mSpree::Preference Load (0.2ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT 1[0m  [["key", "spree/frontend_configuration/locale"]]
+  [1m[35mSpree::Store Load (0.4ms)[0m  SELECT  "spree_stores".* FROM "spree_stores" WHERE (url like '%localhost%')  ORDER BY "spree_stores"."id" ASC LIMIT 1
+  [1m[36mSpree::Order Load (0.6ms)[0m  [1mSELECT  "spree_orders".* FROM "spree_orders" WHERE "spree_orders"."completed_at" IS NULL AND "spree_orders"."currency" = $1 AND "spree_orders"."guest_token" = $2 AND "spree_orders"."store_id" = $3 LIMIT 1[0m  [["currency", "CLP"], ["guest_token", "HMTycHjVAmNUoQJZyxhx_g1496351751559"], ["store_id", 1]]
+  Rendered spree/shared/_link_to_cart.html.erb (116.3ms)
+  Couldn't find template for digesting: store/cart_link
+Completed 304 Not Modified in 138ms (Views: 123.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/spree_header-198b754a34f1428c25f64303be8ac2aae84a076433af18ca55b65d7cbf1a0e13.jpg" for 127.0.0.1 at 2017-06-06 16:16:21 -0400
