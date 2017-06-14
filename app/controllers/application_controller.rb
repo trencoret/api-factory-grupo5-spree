@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
     response = HTTP.get(url_final)
     responseP = JSON.parse response
     responseP.each do |hash|
-      if hash['sku'] = sku
+      if hash['sku'] == sku
         stock = hash['stock']
         break
       end
