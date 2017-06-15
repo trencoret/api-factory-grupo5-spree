@@ -39,6 +39,7 @@
           <div>
             <span class="lead price selling" itemprop="price">
               <%= display_price(@product) %>
+              <%= hidden_field_tag "price", @product.price %>
             </span>
             <span itemprop="priceCurrency" content="<%= @product.currency %>"></span>
           </div>

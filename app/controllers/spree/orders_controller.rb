@@ -52,10 +52,7 @@ module Spree
       direccion = params[:direccion]
       cliente = params[:name]
       sku = params[:sku]
-      precio_56 = 1000
-      precio_11 = 1000
-      precio_17 = 1000
-      precio_5 =  1000
+      price = params[:price].to_i
       #TODO: Cambiar el precio de venta de los skus
 
       # 2,147,483,647 is crazy. See issue #2695.
@@ -72,17 +69,7 @@ module Spree
         flash[:error] = error
         redirect_back_or_default(spree.root_path)
       else
-        precio_final = 0;
-        
-        if(sku.to_i == 56)
-          precio_final = precio_56
-        elsif (sku.to_i == 11)
-          precio_final = precio_11
-        elsif (sku.to_i == 17)
-          precio_final = precio_17
-        else
-          precio_final = precio_5
-        end
+        precio_final = price*quantity
 
         # Asi estaba antes, ahora para probar comprando de una
 
@@ -100,7 +87,7 @@ module Spree
       puts respuesta["_id"]
       
       #Cuando este arriba
-      url_ok = "http%3A%2F%2Fintegra17-5.ing.puc.cl/tienda/ok/"+respuesta['_id']
+      url_ok = "http%3A%2F%2Fintegra17-5.ing.puc.cl/tienda/ok/"
       # Ahora para probar con local host
       # url_ok = 'http%3A%2F%2Flocalhost:3000/tienda/ok/'+respuesta['_id']
       
@@ -109,7 +96,7 @@ module Spree
       url_fail = "http%3A%2F%2Fintegra17-5.ing.puc.cl/tienda/fail/"
       # Ahora para probar
       # url_fail = 'http%3A%2F%2Flocalhost:3000/tienda/fail/'
-      url = "http://integracion-2017-prod.herokuapp.com/web/pagoenlinea?callbackUrl="+url_ok+"&cancelUrl="+url_fail+"+&boletaId="+respuesta['_id']
+      url = "https://integracion-2017-prod.herokuapp.com/web/pagoenlinea?callbackUrl="+url_ok+"&cancelUrl="+url_fail+"+&boletaId="+respuesta['_id']
 
       redirect_to url
       end
