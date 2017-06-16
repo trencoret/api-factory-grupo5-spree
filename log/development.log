@@ -10119,3 +10119,781 @@ Processing by Spree::OrdersController#populate as HTML
   [1m[35mSQL (5.3ms)[0m  UPDATE "spree_orders" SET "payment_state" = NULL, "shipment_state" = NULL, "item_total" = 1450.0, "item_count" = 11, "adjustment_total" = 0.0, "included_tax_total" = 0.0, "additional_tax_total" = 0.0, "payment_total" = 0.0, "shipment_total" = 0.0, "promo_total" = 0.0, "total" = 1450.0, "updated_at" = '2017-06-15 17:47:35.188328' WHERE "spree_orders"."id" = $1  [["id", 1]]
 Redirected to https://integracion-2017-prod.herokuapp.com/web/pagoenlinea?callbackUrl=https%3A%2F%2Fintegra17-5.ing.puc.cl/tienda/ok/&cancelUrl=https%3A%2F%2Fintegra17-5.ing.puc.cl/tienda/fail/+&boletaId=5942c838819b71000480a42f
 Completed 302 Found in 2289ms (ActiveRecord: 89.3ms)
+  [1m[36mSpree::Preference Load (0.3ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1  ORDER BY "spree_preferences"."id" ASC LIMIT 1[0m  [["key", "spree/app_configuration/currency"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSpree::Preference Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "spree_preferences" WHERE ("spree_preferences"."key" = 'spree/app_configuration/currency' AND "spree_preferences"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+DEPRECATION WARNING: Spree::User must include Spree::UserMethods. (called from block in <top (required)> at /home/zuri/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/bundler/gems/spree-5384ab6e8318/core/config/initializers/user_class_extensions.rb:7)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSpree::Product Load (9.3ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."sku" = '5' LIMIT 1
+  [1m[36mSpree::Preference Load (0.4ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1  ORDER BY "spree_preferences"."id" ASC LIMIT 1[0m  [["key", "spree/app_configuration/currency"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSpree::Preference Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "spree_preferences" WHERE ("spree_preferences"."key" = 'spree/app_configuration/currency' AND "spree_preferences"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+DEPRECATION WARNING: Spree::User must include Spree::UserMethods. (called from block in <top (required)> at /home/zuri/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/bundler/gems/spree-5384ab6e8318/core/config/initializers/user_class_extensions.rb:7)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSpree::Product Load (91.9ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", "Yogurt"]]
+  [1m[36mSpree::Variant Load (0.5ms)[0m  [1mSELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1[0m  [["product_id", 1], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26059-1ixdqx3.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26059-dlpkqw.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26059-dlpkqw.jpg[0]'
+Command :: convert '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26059-dlpkqw.jpg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/470c73d4b5a0609bf1f0d4972e81524f20170615-26059-axlrbj'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26059-dlpkqw.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26059-dlpkqw.jpg[0]'
+Command :: convert '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26059-dlpkqw.jpg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/470c73d4b5a0609bf1f0d4972e81524f20170615-26059-14etexw'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26059-dlpkqw.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26059-dlpkqw.jpg[0]'
+Command :: convert '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26059-dlpkqw.jpg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/470c73d4b5a0609bf1f0d4972e81524f20170615-26059-1r5f0r1'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26059-dlpkqw.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26059-dlpkqw.jpg[0]'
+Command :: convert '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26059-dlpkqw.jpg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/470c73d4b5a0609bf1f0d4972e81524f20170615-26059-16v1gci'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26059-1hxcnuv.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26059-dlpkqw.jpg[0]' 2>/dev/null
+  [1m[36mSpree::Asset Load (0.4ms)[0m  [1mSELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1[0m  [["viewable_id", 1], ["viewable_type", "Spree::Variant"]]
+  [1m[35mSQL (13.5ms)[0m  INSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["type", "Spree::Image"], ["attachment_file_name", "yogur.jpg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 31944], ["attachment_updated_at", "2017-06-16 01:57:07.344396"], ["viewable_id", 1], ["viewable_type", "Spree::Variant"], ["attachment_width", 775], ["attachment_height", 800], ["created_at", "2017-06-16 01:57:07.820967"], ["updated_at", "2017-06-16 01:57:07.820967"], ["position", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_variants" SET "updated_at" = '2017-06-16 01:57:07.837769' WHERE "spree_variants"."id" = $1[0m  [["id", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_products" SET "updated_at" = '2017-06-16 01:57:07.839132' WHERE "spree_products"."id" = $1  [["id", 1]]
+  [1m[36mSpree::Taxon Load (0.7ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_taxons" SET "updated_at" = '2017-06-16 01:57:07.886202' WHERE 1=0
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 01:57:07.889673' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)[0m
+  [1m[35m (8.8ms)[0m  COMMIT
+  [1m[36mSpree::Product Load (0.3ms)[0m  [1mSELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1[0m  [["name", "Margarina"]]
+  [1m[35mSpree::Variant Load (0.3ms)[0m  SELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1  [["product_id", 2], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26059-15pxags.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26059-1o6ekkq.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26059-1o6ekkq.jpg[0]'
+Command :: convert '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26059-1o6ekkq.jpg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/f2d7ebb400cf56115eab28513499c28720170615-26059-qp8hl6'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26059-1o6ekkq.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26059-1o6ekkq.jpg[0]'
+Command :: convert '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26059-1o6ekkq.jpg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/f2d7ebb400cf56115eab28513499c28720170615-26059-9q765m'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26059-1o6ekkq.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26059-1o6ekkq.jpg[0]'
+Command :: convert '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26059-1o6ekkq.jpg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/f2d7ebb400cf56115eab28513499c28720170615-26059-12o6cam'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26059-1o6ekkq.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26059-1o6ekkq.jpg[0]'
+Command :: convert '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26059-1o6ekkq.jpg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/f2d7ebb400cf56115eab28513499c28720170615-26059-93fjow'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26059-se80qr.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26059-1o6ekkq.jpg[0]' 2>/dev/null
+  [1m[35mSpree::Asset Load (0.3ms)[0m  SELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1  [["viewable_id", 2], ["viewable_type", "Spree::Variant"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["type", "Spree::Image"], ["attachment_file_name", "margarina.jpg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 27241], ["attachment_updated_at", "2017-06-16 01:57:07.908964"], ["viewable_id", 2], ["viewable_type", "Spree::Variant"], ["attachment_width", 600], ["attachment_height", 531], ["created_at", "2017-06-16 01:57:08.021766"], ["updated_at", "2017-06-16 01:57:08.021766"], ["position", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_variants" SET "updated_at" = '2017-06-16 01:57:08.024502' WHERE "spree_variants"."id" = $1  [["id", 2]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_products" SET "updated_at" = '2017-06-16 01:57:08.025788' WHERE "spree_products"."id" = $1[0m  [["id", 2]]
+  [1m[35mSpree::Taxon Load (0.3ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1  [["product_id", 2]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "spree_taxons" SET "updated_at" = '2017-06-16 01:57:08.027920' WHERE 1=0[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 01:57:08.028835' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)
+  [1m[36m (15.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mSpree::Product Load (0.3ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", "Cereal de Arroz"]]
+  [1m[36mSpree::Variant Load (0.3ms)[0m  [1mSELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1[0m  [["product_id", 3], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26059-1a79pnh.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26059-119k5vz.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26059-119k5vz.png[0]'
+Command :: convert '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26059-119k5vz.png[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/68041d5b547b19746211c7c4fe5ebaff20170615-26059-19ueqlf'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26059-119k5vz.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26059-119k5vz.png[0]'
+Command :: convert '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26059-119k5vz.png[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/68041d5b547b19746211c7c4fe5ebaff20170615-26059-hcwyq5'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26059-119k5vz.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26059-119k5vz.png[0]'
+Command :: convert '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26059-119k5vz.png[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/68041d5b547b19746211c7c4fe5ebaff20170615-26059-m959xa'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26059-119k5vz.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26059-119k5vz.png[0]'
+Command :: convert '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26059-119k5vz.png[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/68041d5b547b19746211c7c4fe5ebaff20170615-26059-hp4i2n'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26059-oqcu7w.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26059-119k5vz.png[0]' 2>/dev/null
+  [1m[36mSpree::Asset Load (0.3ms)[0m  [1mSELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1[0m  [["viewable_id", 3], ["viewable_type", "Spree::Variant"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["type", "Spree::Image"], ["attachment_file_name", "arroz.png"], ["attachment_content_type", "image/png"], ["attachment_file_size", 515221], ["attachment_updated_at", "2017-06-16 01:57:08.053846"], ["viewable_id", 3], ["viewable_type", "Spree::Variant"], ["attachment_width", 800], ["attachment_height", 600], ["created_at", "2017-06-16 01:57:08.545074"], ["updated_at", "2017-06-16 01:57:08.545074"], ["position", 1]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "spree_variants" SET "updated_at" = '2017-06-16 01:57:08.547710' WHERE "spree_variants"."id" = $1[0m  [["id", 3]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_products" SET "updated_at" = '2017-06-16 01:57:08.548943' WHERE "spree_products"."id" = $1  [["id", 3]]
+  [1m[36mSpree::Taxon Load (0.4ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1[0m  [["product_id", 3]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_taxons" SET "updated_at" = '2017-06-16 01:57:08.551369' WHERE 1=0
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 01:57:08.552273' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)[0m
+  [1m[35m (12.0ms)[0m  COMMIT
+  [1m[36mSpree::Product Load (0.3ms)[0m  [1mSELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1[0m  [["name", "Hamburguesa de Pollo"]]
+  [1m[35mSpree::Variant Load (0.3ms)[0m  SELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1  [["product_id", 4], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/85738572271b1cedfd4f27f8a565433520170615-26059-16uxlce.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/85738572271b1cedfd4f27f8a565433520170615-26059-gnmgld.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/85738572271b1cedfd4f27f8a565433520170615-26059-gnmgld.jpeg[0]'
+Command :: convert '/tmp/85738572271b1cedfd4f27f8a565433520170615-26059-gnmgld.jpeg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/778f549d3ffe439f68dd3e6c8b3313ae20170615-26059-jhwkm8'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/85738572271b1cedfd4f27f8a565433520170615-26059-gnmgld.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/85738572271b1cedfd4f27f8a565433520170615-26059-gnmgld.jpeg[0]'
+Command :: convert '/tmp/85738572271b1cedfd4f27f8a565433520170615-26059-gnmgld.jpeg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/778f549d3ffe439f68dd3e6c8b3313ae20170615-26059-1mwcima'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/85738572271b1cedfd4f27f8a565433520170615-26059-gnmgld.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/85738572271b1cedfd4f27f8a565433520170615-26059-gnmgld.jpeg[0]'
+Command :: convert '/tmp/85738572271b1cedfd4f27f8a565433520170615-26059-gnmgld.jpeg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/778f549d3ffe439f68dd3e6c8b3313ae20170615-26059-t4txa5'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/85738572271b1cedfd4f27f8a565433520170615-26059-gnmgld.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/85738572271b1cedfd4f27f8a565433520170615-26059-gnmgld.jpeg[0]'
+Command :: convert '/tmp/85738572271b1cedfd4f27f8a565433520170615-26059-gnmgld.jpeg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/778f549d3ffe439f68dd3e6c8b3313ae20170615-26059-1hky2ln'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/tmp/85738572271b1cedfd4f27f8a565433520170615-26059-130ocjx.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/85738572271b1cedfd4f27f8a565433520170615-26059-gnmgld.jpeg[0]' 2>/dev/null
+  [1m[35mSpree::Asset Load (0.3ms)[0m  SELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1  [["viewable_id", 4], ["viewable_type", "Spree::Variant"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["type", "Spree::Image"], ["attachment_file_name", "pollo.jpeg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 56138], ["attachment_updated_at", "2017-06-16 01:57:08.573076"], ["viewable_id", 4], ["viewable_type", "Spree::Variant"], ["attachment_width", 616], ["attachment_height", 462], ["created_at", "2017-06-16 01:57:08.704953"], ["updated_at", "2017-06-16 01:57:08.704953"], ["position", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_variants" SET "updated_at" = '2017-06-16 01:57:08.707544' WHERE "spree_variants"."id" = $1  [["id", 4]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "spree_products" SET "updated_at" = '2017-06-16 01:57:08.708775' WHERE "spree_products"."id" = $1[0m  [["id", 4]]
+  [1m[35mSpree::Taxon Load (0.3ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1  [["product_id", 4]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "spree_taxons" SET "updated_at" = '2017-06-16 01:57:08.711145' WHERE 1=0[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 01:57:08.712060' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)
+  [1m[36m (18.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mSpree::Product Load (0.3ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", "Maiz"]]
+  [1m[36mSpree::Variant Load (0.3ms)[0m  [1mSELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1[0m  [["product_id", 5], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26059-1peq9da.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26059-1oqilpn.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26059-1oqilpn.jpg[0]'
+Command :: convert '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26059-1oqilpn.jpg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/4f8b632afa764f3b2ebbed0b90ef538120170615-26059-8fhh94'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26059-1oqilpn.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26059-1oqilpn.jpg[0]'
+Command :: convert '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26059-1oqilpn.jpg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/4f8b632afa764f3b2ebbed0b90ef538120170615-26059-e7vbtn'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26059-1oqilpn.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26059-1oqilpn.jpg[0]'
+Command :: convert '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26059-1oqilpn.jpg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/4f8b632afa764f3b2ebbed0b90ef538120170615-26059-1yrrpp0'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26059-1oqilpn.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26059-1oqilpn.jpg[0]'
+Command :: convert '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26059-1oqilpn.jpg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/4f8b632afa764f3b2ebbed0b90ef538120170615-26059-dl7465'
+  [1m[35m (0.1ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26059-fzztlm.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26059-1oqilpn.jpg[0]' 2>/dev/null
+  [1m[36mSpree::Asset Load (0.4ms)[0m  [1mSELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1[0m  [["viewable_id", 5], ["viewable_type", "Spree::Variant"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["type", "Spree::Image"], ["attachment_file_name", "maiz.jpg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 20965], ["attachment_updated_at", "2017-06-16 01:57:08.738963"], ["viewable_id", 5], ["viewable_type", "Spree::Variant"], ["attachment_width", 300], ["attachment_height", 240], ["created_at", "2017-06-16 01:57:08.828337"], ["updated_at", "2017-06-16 01:57:08.828337"], ["position", 1]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "spree_variants" SET "updated_at" = '2017-06-16 01:57:08.830885' WHERE "spree_variants"."id" = $1[0m  [["id", 5]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_products" SET "updated_at" = '2017-06-16 01:57:08.832069' WHERE "spree_products"."id" = $1  [["id", 5]]
+  [1m[36mSpree::Taxon Load (0.4ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1[0m  [["product_id", 5]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_taxons" SET "updated_at" = '2017-06-16 01:57:08.834249' WHERE 1=0
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 01:57:08.835029' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)[0m
+  [1m[35m (22.0ms)[0m  COMMIT
+  [1m[36mSpree::Product Load (0.3ms)[0m  [1mSELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1[0m  [["name", "Leche"]]
+  [1m[35mSpree::Variant Load (0.3ms)[0m  SELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1  [["product_id", 6], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26059-im020q.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26059-148g4cv.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26059-148g4cv.jpg[0]'
+Command :: convert '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26059-148g4cv.jpg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/7225244bd9a0c738467a28ec2b5aa17c20170615-26059-k8ff73'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26059-148g4cv.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26059-148g4cv.jpg[0]'
+Command :: convert '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26059-148g4cv.jpg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/7225244bd9a0c738467a28ec2b5aa17c20170615-26059-ki94bj'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26059-148g4cv.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26059-148g4cv.jpg[0]'
+Command :: convert '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26059-148g4cv.jpg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/7225244bd9a0c738467a28ec2b5aa17c20170615-26059-m2vdmd'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26059-148g4cv.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26059-148g4cv.jpg[0]'
+Command :: convert '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26059-148g4cv.jpg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/7225244bd9a0c738467a28ec2b5aa17c20170615-26059-102uj0p'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26059-i5kh2d.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26059-148g4cv.jpg[0]' 2>/dev/null
+  [1m[35mSpree::Asset Load (0.3ms)[0m  SELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1  [["viewable_id", 6], ["viewable_type", "Spree::Variant"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["type", "Spree::Image"], ["attachment_file_name", "leche.jpg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 9290], ["attachment_updated_at", "2017-06-16 01:57:08.865735"], ["viewable_id", 6], ["viewable_type", "Spree::Variant"], ["attachment_width", 300], ["attachment_height", 300], ["created_at", "2017-06-16 01:57:08.970647"], ["updated_at", "2017-06-16 01:57:08.970647"], ["position", 1]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "spree_variants" SET "updated_at" = '2017-06-16 01:57:08.973302' WHERE "spree_variants"."id" = $1  [["id", 6]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_products" SET "updated_at" = '2017-06-16 01:57:08.974396' WHERE "spree_products"."id" = $1[0m  [["id", 6]]
+  [1m[35mSpree::Taxon Load (0.4ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1  [["product_id", 6]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "spree_taxons" SET "updated_at" = '2017-06-16 01:57:08.976774' WHERE 1=0[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 01:57:08.977624' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)
+  [1m[36m (28.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mSpree::Product Load (0.2ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", "Carne"]]
+  [1m[36mSpree::Preference Load (0.4ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1  ORDER BY "spree_preferences"."id" ASC LIMIT 1[0m  [["key", "spree/app_configuration/currency"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSpree::Preference Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "spree_preferences" WHERE ("spree_preferences"."key" = 'spree/app_configuration/currency' AND "spree_preferences"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+DEPRECATION WARNING: Spree::User must include Spree::UserMethods. (called from block in <top (required)> at /home/zuri/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/bundler/gems/spree-5384ab6e8318/core/config/initializers/user_class_extensions.rb:7)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSpree::Product Load (0.5ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", "Yogur"]]
+  [1m[36mSpree::Preference Load (0.4ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1  ORDER BY "spree_preferences"."id" ASC LIMIT 1[0m  [["key", "spree/app_configuration/currency"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSpree::Preference Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "spree_preferences" WHERE ("spree_preferences"."key" = 'spree/app_configuration/currency' AND "spree_preferences"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+DEPRECATION WARNING: Spree::User must include Spree::UserMethods. (called from block in <top (required)> at /home/zuri/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/bundler/gems/spree-5384ab6e8318/core/config/initializers/user_class_extensions.rb:7)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSpree::Product Load (0.5ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", "Yogur"]]
+  [1m[36mSpree::Preference Load (0.4ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1  ORDER BY "spree_preferences"."id" ASC LIMIT 1[0m  [["key", "spree/app_configuration/currency"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSpree::Preference Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "spree_preferences" WHERE ("spree_preferences"."key" = 'spree/app_configuration/currency' AND "spree_preferences"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+DEPRECATION WARNING: Spree::User must include Spree::UserMethods. (called from block in <top (required)> at /home/zuri/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/bundler/gems/spree-5384ab6e8318/core/config/initializers/user_class_extensions.rb:7)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSpree::Product Load (2.5ms)[0m  SELECT "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL
+  [1m[36mSpree::Product Load (0.9ms)[0m  [1mSELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1[0m  [["name", "Yogurt"]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mSpree::Preference Load (0.4ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1  ORDER BY "spree_preferences"."id" ASC LIMIT 1[0m  [["key", "spree/app_configuration/currency"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSpree::Preference Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "spree_preferences" WHERE ("spree_preferences"."key" = 'spree/app_configuration/currency' AND "spree_preferences"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+DEPRECATION WARNING: Spree::User must include Spree::UserMethods. (called from block in <top (required)> at /home/zuri/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/bundler/gems/spree-5384ab6e8318/core/config/initializers/user_class_extensions.rb:7)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSpree::Product Load (0.5ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", "Yogurt"]]
+  [1m[36mSpree::Variant Load (0.5ms)[0m  [1mSELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1[0m  [["product_id", 1], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26470-13onhmy.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26470-1jik0ci.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26470-1jik0ci.jpg[0]'
+Command :: convert '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26470-1jik0ci.jpg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/4071a549e295d90b47f68136cd75398220170615-26470-c8qkkj'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26470-1jik0ci.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26470-1jik0ci.jpg[0]'
+Command :: convert '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26470-1jik0ci.jpg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/4071a549e295d90b47f68136cd75398220170615-26470-1r6tmx6'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26470-1jik0ci.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26470-1jik0ci.jpg[0]'
+Command :: convert '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26470-1jik0ci.jpg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/4071a549e295d90b47f68136cd75398220170615-26470-buztuw'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26470-1jik0ci.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26470-1jik0ci.jpg[0]'
+Command :: convert '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26470-1jik0ci.jpg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/4071a549e295d90b47f68136cd75398220170615-26470-jput4i'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26470-9wj4w1.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26470-1jik0ci.jpg[0]' 2>/dev/null
+  [1m[36mSpree::Asset Load (0.4ms)[0m  [1mSELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1[0m  [["viewable_id", 1], ["viewable_type", "Spree::Variant"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["type", "Spree::Image"], ["attachment_file_name", "yogur.jpg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 31944], ["attachment_updated_at", "2017-06-16 02:00:17.673700"], ["viewable_id", 1], ["viewable_type", "Spree::Variant"], ["attachment_width", 775], ["attachment_height", 800], ["created_at", "2017-06-16 02:00:17.845614"], ["updated_at", "2017-06-16 02:00:17.845614"], ["position", 2]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:00:17.849167' WHERE "spree_variants"."id" = $1[0m  [["id", 1]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "spree_products" SET "updated_at" = '2017-06-16 02:00:17.850328' WHERE "spree_products"."id" = $1  [["id", 1]]
+  [1m[36mSpree::Taxon Load (0.7ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:00:17.898685' WHERE 1=0
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:00:17.902073' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)[0m
+  [1m[35m (9.5ms)[0m  COMMIT
+  [1m[36mSpree::Product Load (0.3ms)[0m  [1mSELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1[0m  [["name", "Margarina"]]
+  [1m[35mSpree::Variant Load (0.3ms)[0m  SELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1  [["product_id", 2], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26470-x8xn0a.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26470-1vzohqz.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26470-1vzohqz.jpg[0]'
+Command :: convert '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26470-1vzohqz.jpg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/b57df862bd6691c0c99ab66164b671c020170615-26470-1krf32o'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26470-1vzohqz.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26470-1vzohqz.jpg[0]'
+Command :: convert '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26470-1vzohqz.jpg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/b57df862bd6691c0c99ab66164b671c020170615-26470-12qivxb'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26470-1vzohqz.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26470-1vzohqz.jpg[0]'
+Command :: convert '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26470-1vzohqz.jpg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/b57df862bd6691c0c99ab66164b671c020170615-26470-1mtm3bs'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26470-1vzohqz.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26470-1vzohqz.jpg[0]'
+Command :: convert '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26470-1vzohqz.jpg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/b57df862bd6691c0c99ab66164b671c020170615-26470-1bqsqt2'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26470-em1jey.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26470-1vzohqz.jpg[0]' 2>/dev/null
+  [1m[35mSpree::Asset Load (0.3ms)[0m  SELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1  [["viewable_id", 2], ["viewable_type", "Spree::Variant"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["type", "Spree::Image"], ["attachment_file_name", "margarina.jpg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 27241], ["attachment_updated_at", "2017-06-16 02:00:17.922439"], ["viewable_id", 2], ["viewable_type", "Spree::Variant"], ["attachment_width", 600], ["attachment_height", 531], ["created_at", "2017-06-16 02:00:18.041792"], ["updated_at", "2017-06-16 02:00:18.041792"], ["position", 2]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:00:18.044686' WHERE "spree_variants"."id" = $1  [["id", 2]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_products" SET "updated_at" = '2017-06-16 02:00:18.045851' WHERE "spree_products"."id" = $1[0m  [["id", 2]]
+  [1m[35mSpree::Taxon Load (0.4ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1  [["product_id", 2]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:00:18.048187' WHERE 1=0[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:00:18.049125' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mSpree::Product Load (0.3ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", "Cereal de Arroz"]]
+  [1m[36mSpree::Variant Load (0.3ms)[0m  [1mSELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1[0m  [["product_id", 3], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26470-dfz6ul.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26470-11qs2qv.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26470-11qs2qv.png[0]'
+Command :: convert '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26470-11qs2qv.png[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/9193127648cd78133efc007ec1d2fc2620170615-26470-u5q5cz'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26470-11qs2qv.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26470-11qs2qv.png[0]'
+Command :: convert '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26470-11qs2qv.png[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/9193127648cd78133efc007ec1d2fc2620170615-26470-ieint5'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26470-11qs2qv.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26470-11qs2qv.png[0]'
+Command :: convert '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26470-11qs2qv.png[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/9193127648cd78133efc007ec1d2fc2620170615-26470-13f0dak'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26470-11qs2qv.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26470-11qs2qv.png[0]'
+Command :: convert '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26470-11qs2qv.png[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/9193127648cd78133efc007ec1d2fc2620170615-26470-1eo5zzu'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26470-9xmmg7.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26470-11qs2qv.png[0]' 2>/dev/null
+  [1m[36mSpree::Asset Load (0.4ms)[0m  [1mSELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1[0m  [["viewable_id", 3], ["viewable_type", "Spree::Variant"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["type", "Spree::Image"], ["attachment_file_name", "arroz.png"], ["attachment_content_type", "image/png"], ["attachment_file_size", 515221], ["attachment_updated_at", "2017-06-16 02:00:18.067385"], ["viewable_id", 3], ["viewable_type", "Spree::Variant"], ["attachment_width", 800], ["attachment_height", 600], ["created_at", "2017-06-16 02:00:18.484586"], ["updated_at", "2017-06-16 02:00:18.484586"], ["position", 2]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:00:18.487381' WHERE "spree_variants"."id" = $1[0m  [["id", 3]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_products" SET "updated_at" = '2017-06-16 02:00:18.488677' WHERE "spree_products"."id" = $1  [["id", 3]]
+  [1m[36mSpree::Taxon Load (0.3ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1[0m  [["product_id", 3]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:00:18.490976' WHERE 1=0
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:00:18.491871' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)[0m
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36mSpree::Product Load (0.3ms)[0m  [1mSELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1[0m  [["name", "Hamburguesa de Pollo"]]
+  [1m[35mSpree::Variant Load (0.3ms)[0m  SELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1  [["product_id", 4], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/85738572271b1cedfd4f27f8a565433520170615-26470-8vslck.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/85738572271b1cedfd4f27f8a565433520170615-26470-enea0s.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/85738572271b1cedfd4f27f8a565433520170615-26470-enea0s.jpeg[0]'
+Command :: convert '/tmp/85738572271b1cedfd4f27f8a565433520170615-26470-enea0s.jpeg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/db8ae61443be606ea4f7cee0c693c74b20170615-26470-7cjwti'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/85738572271b1cedfd4f27f8a565433520170615-26470-enea0s.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/85738572271b1cedfd4f27f8a565433520170615-26470-enea0s.jpeg[0]'
+Command :: convert '/tmp/85738572271b1cedfd4f27f8a565433520170615-26470-enea0s.jpeg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/db8ae61443be606ea4f7cee0c693c74b20170615-26470-uurobr'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/85738572271b1cedfd4f27f8a565433520170615-26470-enea0s.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/85738572271b1cedfd4f27f8a565433520170615-26470-enea0s.jpeg[0]'
+Command :: convert '/tmp/85738572271b1cedfd4f27f8a565433520170615-26470-enea0s.jpeg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/db8ae61443be606ea4f7cee0c693c74b20170615-26470-jsrbzt'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/85738572271b1cedfd4f27f8a565433520170615-26470-enea0s.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/85738572271b1cedfd4f27f8a565433520170615-26470-enea0s.jpeg[0]'
+Command :: convert '/tmp/85738572271b1cedfd4f27f8a565433520170615-26470-enea0s.jpeg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/db8ae61443be606ea4f7cee0c693c74b20170615-26470-1v7lsix'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/tmp/85738572271b1cedfd4f27f8a565433520170615-26470-1h2cxl0.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/85738572271b1cedfd4f27f8a565433520170615-26470-enea0s.jpeg[0]' 2>/dev/null
+  [1m[35mSpree::Asset Load (0.3ms)[0m  SELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1  [["viewable_id", 4], ["viewable_type", "Spree::Variant"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["type", "Spree::Image"], ["attachment_file_name", "pollo.jpeg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 56138], ["attachment_updated_at", "2017-06-16 02:00:18.509038"], ["viewable_id", 4], ["viewable_type", "Spree::Variant"], ["attachment_width", 616], ["attachment_height", 462], ["created_at", "2017-06-16 02:00:18.640790"], ["updated_at", "2017-06-16 02:00:18.640790"], ["position", 2]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:00:18.643581' WHERE "spree_variants"."id" = $1  [["id", 4]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_products" SET "updated_at" = '2017-06-16 02:00:18.644777' WHERE "spree_products"."id" = $1[0m  [["id", 4]]
+  [1m[35mSpree::Taxon Load (0.3ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1  [["product_id", 4]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:00:18.646965' WHERE 1=0[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:00:18.647826' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)
+  [1m[36m (7.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mSpree::Product Load (0.3ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", "Maiz"]]
+  [1m[36mSpree::Variant Load (0.3ms)[0m  [1mSELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1[0m  [["product_id", 5], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26470-10mfnwc.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26470-gk8w7m.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26470-gk8w7m.jpg[0]'
+Command :: convert '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26470-gk8w7m.jpg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/4dbc65f253d96475418138a5ace78aff20170615-26470-6baol1'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26470-gk8w7m.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26470-gk8w7m.jpg[0]'
+Command :: convert '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26470-gk8w7m.jpg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/4dbc65f253d96475418138a5ace78aff20170615-26470-1emx12q'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26470-gk8w7m.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26470-gk8w7m.jpg[0]'
+Command :: convert '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26470-gk8w7m.jpg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/4dbc65f253d96475418138a5ace78aff20170615-26470-1pebthi'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26470-gk8w7m.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26470-gk8w7m.jpg[0]'
+Command :: convert '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26470-gk8w7m.jpg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/4dbc65f253d96475418138a5ace78aff20170615-26470-1oia8a1'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26470-1svyccl.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26470-gk8w7m.jpg[0]' 2>/dev/null
+  [1m[36mSpree::Asset Load (0.3ms)[0m  [1mSELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1[0m  [["viewable_id", 5], ["viewable_type", "Spree::Variant"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["type", "Spree::Image"], ["attachment_file_name", "maiz.jpg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 20965], ["attachment_updated_at", "2017-06-16 02:00:18.663972"], ["viewable_id", 5], ["viewable_type", "Spree::Variant"], ["attachment_width", 300], ["attachment_height", 240], ["created_at", "2017-06-16 02:00:18.757223"], ["updated_at", "2017-06-16 02:00:18.757223"], ["position", 2]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:00:18.759955' WHERE "spree_variants"."id" = $1[0m  [["id", 5]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "spree_products" SET "updated_at" = '2017-06-16 02:00:18.761139' WHERE "spree_products"."id" = $1  [["id", 5]]
+  [1m[36mSpree::Taxon Load (0.3ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1[0m  [["product_id", 5]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:00:18.763247' WHERE 1=0
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:00:18.764122' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)[0m
+  [1m[35m (23.3ms)[0m  COMMIT
+  [1m[36mSpree::Product Load (0.3ms)[0m  [1mSELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1[0m  [["name", "Leche"]]
+  [1m[35mSpree::Variant Load (0.3ms)[0m  SELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1  [["product_id", 6], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26470-dxo75l.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26470-gm4zn7.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26470-gm4zn7.jpg[0]'
+Command :: convert '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26470-gm4zn7.jpg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/13dacaedb79cf96f42010903f5b3c4b220170615-26470-gsb96l'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26470-gm4zn7.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26470-gm4zn7.jpg[0]'
+Command :: convert '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26470-gm4zn7.jpg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/13dacaedb79cf96f42010903f5b3c4b220170615-26470-1gngkxr'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26470-gm4zn7.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26470-gm4zn7.jpg[0]'
+Command :: convert '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26470-gm4zn7.jpg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/13dacaedb79cf96f42010903f5b3c4b220170615-26470-cxe60t'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26470-gm4zn7.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26470-gm4zn7.jpg[0]'
+Command :: convert '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26470-gm4zn7.jpg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/13dacaedb79cf96f42010903f5b3c4b220170615-26470-6lg6ry'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26470-1rg1nwe.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26470-gm4zn7.jpg[0]' 2>/dev/null
+  [1m[35mSpree::Asset Load (0.4ms)[0m  SELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1  [["viewable_id", 6], ["viewable_type", "Spree::Variant"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["type", "Spree::Image"], ["attachment_file_name", "leche.jpg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 9290], ["attachment_updated_at", "2017-06-16 02:00:18.796709"], ["viewable_id", 6], ["viewable_type", "Spree::Variant"], ["attachment_width", 300], ["attachment_height", 300], ["created_at", "2017-06-16 02:00:18.902410"], ["updated_at", "2017-06-16 02:00:18.902410"], ["position", 2]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:00:18.905353' WHERE "spree_variants"."id" = $1  [["id", 6]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_products" SET "updated_at" = '2017-06-16 02:00:18.906456' WHERE "spree_products"."id" = $1[0m  [["id", 6]]
+  [1m[35mSpree::Taxon Load (0.4ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1  [["product_id", 6]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:00:18.910396' WHERE 1=0[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:00:18.911331' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)
+  [1m[36m (8.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mSpree::Product Load (0.2ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", "Carne"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSpree::Product Load (1.4ms)[0m  SELECT "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL
+  [1m[36mSpree::Product Load (0.2ms)[0m  [1mSELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1[0m  [["name", "Leche"]]
+  [1m[35mSpree::Product Load (0.3ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", "Carne"]]
+  [1m[36mSpree::Product Load (0.8ms)[0m  [1mSELECT "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mSpree::Preference Load (0.4ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1  ORDER BY "spree_preferences"."id" ASC LIMIT 1[0m  [["key", "spree/app_configuration/currency"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSpree::Preference Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "spree_preferences" WHERE ("spree_preferences"."key" = 'spree/app_configuration/currency' AND "spree_preferences"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+DEPRECATION WARNING: Spree::User must include Spree::UserMethods. (called from block in <top (required)> at /home/zuri/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/bundler/gems/spree-5384ab6e8318/core/config/initializers/user_class_extensions.rb:7)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSpree::Product Load (0.5ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", "Yogurt"]]
+  [1m[36mSpree::Variant Load (0.5ms)[0m  [1mSELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1[0m  [["product_id", 1], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26815-18gv9ja.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26815-k1ryax.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26815-k1ryax.jpg[0]'
+Command :: convert '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26815-k1ryax.jpg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/d2e625d1577c9a60711d7cb87d6c796e20170615-26815-17dy7fr'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26815-k1ryax.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26815-k1ryax.jpg[0]'
+Command :: convert '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26815-k1ryax.jpg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/d2e625d1577c9a60711d7cb87d6c796e20170615-26815-1kejaoc'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26815-k1ryax.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26815-k1ryax.jpg[0]'
+Command :: convert '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26815-k1ryax.jpg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/d2e625d1577c9a60711d7cb87d6c796e20170615-26815-1yemd3s'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26815-k1ryax.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26815-k1ryax.jpg[0]'
+Command :: convert '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26815-k1ryax.jpg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/d2e625d1577c9a60711d7cb87d6c796e20170615-26815-1rixmm1'
+  [1m[35m (0.1ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26815-17me264.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/877179be82bf2aafdf39dd6bad7f53a820170615-26815-k1ryax.jpg[0]' 2>/dev/null
+  [1m[36mSpree::Asset Load (0.6ms)[0m  [1mSELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1[0m  [["viewable_id", 1], ["viewable_type", "Spree::Variant"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["type", "Spree::Image"], ["attachment_file_name", "yogur.jpg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 31944], ["attachment_updated_at", "2017-06-16 02:04:09.319970"], ["viewable_id", 1], ["viewable_type", "Spree::Variant"], ["attachment_width", 775], ["attachment_height", 800], ["created_at", "2017-06-16 02:04:09.489493"], ["updated_at", "2017-06-16 02:04:09.489493"], ["position", 3]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:04:09.493727' WHERE "spree_variants"."id" = $1[0m  [["id", 1]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "spree_products" SET "updated_at" = '2017-06-16 02:04:09.495228' WHERE "spree_products"."id" = $1  [["id", 1]]
+  [1m[36mSpree::Taxon Load (0.6ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:04:09.543351' WHERE 1=0
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:04:09.546862' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)[0m
+  [1m[35m (60.5ms)[0m  COMMIT
+  [1m[36mSpree::Product Load (0.3ms)[0m  [1mSELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1[0m  [["name", "Margarina"]]
+  [1m[35mSpree::Variant Load (0.3ms)[0m  SELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1  [["product_id", 2], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26815-srtenn.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26815-184pnrh.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26815-184pnrh.jpg[0]'
+Command :: convert '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26815-184pnrh.jpg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/1c6b30d038dc969f50b6beac8a17b61020170615-26815-q3u6sl'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26815-184pnrh.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26815-184pnrh.jpg[0]'
+Command :: convert '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26815-184pnrh.jpg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/1c6b30d038dc969f50b6beac8a17b61020170615-26815-1hmh9p6'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26815-184pnrh.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26815-184pnrh.jpg[0]'
+Command :: convert '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26815-184pnrh.jpg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/1c6b30d038dc969f50b6beac8a17b61020170615-26815-15mituo'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26815-184pnrh.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26815-184pnrh.jpg[0]'
+Command :: convert '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26815-184pnrh.jpg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/1c6b30d038dc969f50b6beac8a17b61020170615-26815-1m2uo4y'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26815-1cxw6e5.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/961f9c9a280c1052fc276b340ac5f3d920170615-26815-184pnrh.jpg[0]' 2>/dev/null
+  [1m[35mSpree::Asset Load (0.3ms)[0m  SELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1  [["viewable_id", 2], ["viewable_type", "Spree::Variant"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["type", "Spree::Image"], ["attachment_file_name", "margarina.jpg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 27241], ["attachment_updated_at", "2017-06-16 02:04:09.618031"], ["viewable_id", 2], ["viewable_type", "Spree::Variant"], ["attachment_width", 600], ["attachment_height", 531], ["created_at", "2017-06-16 02:04:09.743141"], ["updated_at", "2017-06-16 02:04:09.743141"], ["position", 3]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:04:09.745910' WHERE "spree_variants"."id" = $1  [["id", 2]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_products" SET "updated_at" = '2017-06-16 02:04:09.747148' WHERE "spree_products"."id" = $1[0m  [["id", 2]]
+  [1m[35mSpree::Taxon Load (0.3ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1  [["product_id", 2]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:04:09.749342' WHERE 1=0[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:04:09.750169' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)
+  [1m[36m (12.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mSpree::Product Load (0.3ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", "Cereal de Arroz"]]
+  [1m[36mSpree::Variant Load (0.3ms)[0m  [1mSELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1[0m  [["product_id", 3], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26815-166vibw.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26815-1n4kvru.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26815-1n4kvru.png[0]'
+Command :: convert '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26815-1n4kvru.png[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/8f155ee59a18947b5523caaed0b5232e20170615-26815-zxqnh0'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26815-1n4kvru.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26815-1n4kvru.png[0]'
+Command :: convert '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26815-1n4kvru.png[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/8f155ee59a18947b5523caaed0b5232e20170615-26815-jwfiwk'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26815-1n4kvru.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26815-1n4kvru.png[0]'
+Command :: convert '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26815-1n4kvru.png[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/8f155ee59a18947b5523caaed0b5232e20170615-26815-1k9qk0b'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26815-1n4kvru.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26815-1n4kvru.png[0]'
+Command :: convert '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26815-1n4kvru.png[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/8f155ee59a18947b5523caaed0b5232e20170615-26815-1xn6evm'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26815-1riyz35.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/cd762ef822be9c0c8b1d8b2c3633eddf20170615-26815-1n4kvru.png[0]' 2>/dev/null
+  [1m[36mSpree::Asset Load (0.4ms)[0m  [1mSELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1[0m  [["viewable_id", 3], ["viewable_type", "Spree::Variant"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["type", "Spree::Image"], ["attachment_file_name", "arroz.png"], ["attachment_content_type", "image/png"], ["attachment_file_size", 515221], ["attachment_updated_at", "2017-06-16 02:04:09.772515"], ["viewable_id", 3], ["viewable_type", "Spree::Variant"], ["attachment_width", 800], ["attachment_height", 600], ["created_at", "2017-06-16 02:04:10.191694"], ["updated_at", "2017-06-16 02:04:10.191694"], ["position", 3]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:04:10.194629' WHERE "spree_variants"."id" = $1[0m  [["id", 3]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_products" SET "updated_at" = '2017-06-16 02:04:10.195934' WHERE "spree_products"."id" = $1  [["id", 3]]
+  [1m[36mSpree::Taxon Load (0.3ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1[0m  [["product_id", 3]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:04:10.198228' WHERE 1=0
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:04:10.199109' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)[0m
+  [1m[35m (6.2ms)[0m  COMMIT
+  [1m[36mSpree::Product Load (0.3ms)[0m  [1mSELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1[0m  [["name", "Hamburguesa de Pollo"]]
+  [1m[35mSpree::Variant Load (0.3ms)[0m  SELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1  [["product_id", 4], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/85738572271b1cedfd4f27f8a565433520170615-26815-bqoty5.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/85738572271b1cedfd4f27f8a565433520170615-26815-1wwif8.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/85738572271b1cedfd4f27f8a565433520170615-26815-1wwif8.jpeg[0]'
+Command :: convert '/tmp/85738572271b1cedfd4f27f8a565433520170615-26815-1wwif8.jpeg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/07914e4e20e6b2c8a6b159333b1b954820170615-26815-2hul6v'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/85738572271b1cedfd4f27f8a565433520170615-26815-1wwif8.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/85738572271b1cedfd4f27f8a565433520170615-26815-1wwif8.jpeg[0]'
+Command :: convert '/tmp/85738572271b1cedfd4f27f8a565433520170615-26815-1wwif8.jpeg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/07914e4e20e6b2c8a6b159333b1b954820170615-26815-16j38xf'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/85738572271b1cedfd4f27f8a565433520170615-26815-1wwif8.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/85738572271b1cedfd4f27f8a565433520170615-26815-1wwif8.jpeg[0]'
+Command :: convert '/tmp/85738572271b1cedfd4f27f8a565433520170615-26815-1wwif8.jpeg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/07914e4e20e6b2c8a6b159333b1b954820170615-26815-1ij0e8e'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/85738572271b1cedfd4f27f8a565433520170615-26815-1wwif8.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/85738572271b1cedfd4f27f8a565433520170615-26815-1wwif8.jpeg[0]'
+Command :: convert '/tmp/85738572271b1cedfd4f27f8a565433520170615-26815-1wwif8.jpeg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/07914e4e20e6b2c8a6b159333b1b954820170615-26815-e4z60m'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/tmp/85738572271b1cedfd4f27f8a565433520170615-26815-18kigga.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/85738572271b1cedfd4f27f8a565433520170615-26815-1wwif8.jpeg[0]' 2>/dev/null
+  [1m[35mSpree::Asset Load (0.4ms)[0m  SELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1  [["viewable_id", 4], ["viewable_type", "Spree::Variant"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["type", "Spree::Image"], ["attachment_file_name", "pollo.jpeg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 56138], ["attachment_updated_at", "2017-06-16 02:04:10.214279"], ["viewable_id", 4], ["viewable_type", "Spree::Variant"], ["attachment_width", 616], ["attachment_height", 462], ["created_at", "2017-06-16 02:04:10.349155"], ["updated_at", "2017-06-16 02:04:10.349155"], ["position", 3]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:04:10.351940' WHERE "spree_variants"."id" = $1  [["id", 4]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_products" SET "updated_at" = '2017-06-16 02:04:10.353105' WHERE "spree_products"."id" = $1[0m  [["id", 4]]
+  [1m[35mSpree::Taxon Load (0.4ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1  [["product_id", 4]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:04:10.355417' WHERE 1=0[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:04:10.356266' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)
+  [1m[36m (15.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mSpree::Product Load (0.3ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", "Maiz"]]
+  [1m[36mSpree::Variant Load (0.3ms)[0m  [1mSELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1[0m  [["product_id", 5], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26815-1jy24k0.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26815-1mverxw.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26815-1mverxw.jpg[0]'
+Command :: convert '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26815-1mverxw.jpg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/c7e8033961a6f096757ee2b3c55c12e720170615-26815-1u4q1sl'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26815-1mverxw.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26815-1mverxw.jpg[0]'
+Command :: convert '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26815-1mverxw.jpg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/c7e8033961a6f096757ee2b3c55c12e720170615-26815-hgqruw'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26815-1mverxw.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26815-1mverxw.jpg[0]'
+Command :: convert '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26815-1mverxw.jpg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/c7e8033961a6f096757ee2b3c55c12e720170615-26815-yj9pjr'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26815-1mverxw.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26815-1mverxw.jpg[0]'
+Command :: convert '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26815-1mverxw.jpg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/c7e8033961a6f096757ee2b3c55c12e720170615-26815-zvkpbs'
+  [1m[35m (0.1ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26815-unj4uc.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d74cadf441be21aa59d87cbb88f3347920170615-26815-1mverxw.jpg[0]' 2>/dev/null
+  [1m[36mSpree::Asset Load (0.3ms)[0m  [1mSELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1[0m  [["viewable_id", 5], ["viewable_type", "Spree::Variant"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["type", "Spree::Image"], ["attachment_file_name", "maiz.jpg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 20965], ["attachment_updated_at", "2017-06-16 02:04:10.380240"], ["viewable_id", 5], ["viewable_type", "Spree::Variant"], ["attachment_width", 300], ["attachment_height", 240], ["created_at", "2017-06-16 02:04:10.475481"], ["updated_at", "2017-06-16 02:04:10.475481"], ["position", 3]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:04:10.477824' WHERE "spree_variants"."id" = $1[0m  [["id", 5]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "spree_products" SET "updated_at" = '2017-06-16 02:04:10.478807' WHERE "spree_products"."id" = $1  [["id", 5]]
+  [1m[36mSpree::Taxon Load (0.3ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1[0m  [["product_id", 5]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:04:10.480612' WHERE 1=0
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:04:10.481287' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)[0m
+  [1m[35m (12.3ms)[0m  COMMIT
+  [1m[36mSpree::Product Load (0.3ms)[0m  [1mSELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1[0m  [["name", "Leche"]]
+  [1m[35mSpree::Variant Load (0.2ms)[0m  SELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1  [["product_id", 6], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26815-j6ogt5.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26815-ugn3w8.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26815-ugn3w8.jpg[0]'
+Command :: convert '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26815-ugn3w8.jpg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/fc31a81ecbb74318365efb83386e701a20170615-26815-1fyoi3m'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26815-ugn3w8.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26815-ugn3w8.jpg[0]'
+Command :: convert '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26815-ugn3w8.jpg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/fc31a81ecbb74318365efb83386e701a20170615-26815-kht34d'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26815-ugn3w8.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26815-ugn3w8.jpg[0]'
+Command :: convert '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26815-ugn3w8.jpg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/fc31a81ecbb74318365efb83386e701a20170615-26815-ihmatx'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26815-ugn3w8.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26815-ugn3w8.jpg[0]'
+Command :: convert '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26815-ugn3w8.jpg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/fc31a81ecbb74318365efb83386e701a20170615-26815-17ox1a3'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26815-1rqmeta.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d40a937c6a3fc87e2d5b5cec7c0caf9520170615-26815-ugn3w8.jpg[0]' 2>/dev/null
+  [1m[35mSpree::Asset Load (0.4ms)[0m  SELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1  [["viewable_id", 6], ["viewable_type", "Spree::Variant"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["type", "Spree::Image"], ["attachment_file_name", "leche.jpg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 9290], ["attachment_updated_at", "2017-06-16 02:04:10.501548"], ["viewable_id", 6], ["viewable_type", "Spree::Variant"], ["attachment_width", 300], ["attachment_height", 300], ["created_at", "2017-06-16 02:04:10.611419"], ["updated_at", "2017-06-16 02:04:10.611419"], ["position", 3]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:04:10.614164' WHERE "spree_variants"."id" = $1  [["id", 6]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_products" SET "updated_at" = '2017-06-16 02:04:10.615163' WHERE "spree_products"."id" = $1[0m  [["id", 6]]
+  [1m[35mSpree::Taxon Load (0.4ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1  [["product_id", 6]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:04:10.618435' WHERE 1=0[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:04:10.619416' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)
+  [1m[36m (5.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mSpree::Product Load (0.2ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", " Carne"]]
+  [1m[36mSpree::Variant Load (0.2ms)[0m  [1mSELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1[0m  [["product_id", 7], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/409f4cd5e6a103f5a0d4bfcc18215b0e20170615-26815-ih44fc.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/409f4cd5e6a103f5a0d4bfcc18215b0e20170615-26815-1s767lm.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/409f4cd5e6a103f5a0d4bfcc18215b0e20170615-26815-1s767lm.jpeg[0]'
+Command :: convert '/tmp/409f4cd5e6a103f5a0d4bfcc18215b0e20170615-26815-1s767lm.jpeg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/f7bcd707dd44bb236ceccc85b7a9e14d20170615-26815-m3qzu1'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/409f4cd5e6a103f5a0d4bfcc18215b0e20170615-26815-1s767lm.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/409f4cd5e6a103f5a0d4bfcc18215b0e20170615-26815-1s767lm.jpeg[0]'
+Command :: convert '/tmp/409f4cd5e6a103f5a0d4bfcc18215b0e20170615-26815-1s767lm.jpeg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/f7bcd707dd44bb236ceccc85b7a9e14d20170615-26815-75qaj2'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/409f4cd5e6a103f5a0d4bfcc18215b0e20170615-26815-1s767lm.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/409f4cd5e6a103f5a0d4bfcc18215b0e20170615-26815-1s767lm.jpeg[0]'
+Command :: convert '/tmp/409f4cd5e6a103f5a0d4bfcc18215b0e20170615-26815-1s767lm.jpeg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/f7bcd707dd44bb236ceccc85b7a9e14d20170615-26815-19o2vhi'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/409f4cd5e6a103f5a0d4bfcc18215b0e20170615-26815-1s767lm.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/409f4cd5e6a103f5a0d4bfcc18215b0e20170615-26815-1s767lm.jpeg[0]'
+Command :: convert '/tmp/409f4cd5e6a103f5a0d4bfcc18215b0e20170615-26815-1s767lm.jpeg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/f7bcd707dd44bb236ceccc85b7a9e14d20170615-26815-1yp6gop'
+  [1m[35m (0.1ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/409f4cd5e6a103f5a0d4bfcc18215b0e20170615-26815-29alij.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/409f4cd5e6a103f5a0d4bfcc18215b0e20170615-26815-1s767lm.jpeg[0]' 2>/dev/null
+  [1m[36mSpree::Asset Load (0.2ms)[0m  [1mSELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1[0m  [["viewable_id", 7], ["viewable_type", "Spree::Variant"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["type", "Spree::Image"], ["attachment_file_name", "carne.jpeg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 6221], ["attachment_updated_at", "2017-06-16 02:04:10.635205"], ["viewable_id", 7], ["viewable_type", "Spree::Variant"], ["attachment_width", 240], ["attachment_height", 240], ["created_at", "2017-06-16 02:04:10.716451"], ["updated_at", "2017-06-16 02:04:10.716451"], ["position", 1]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:04:10.719788' WHERE "spree_variants"."id" = $1[0m  [["id", 7]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "spree_products" SET "updated_at" = '2017-06-16 02:04:10.720994' WHERE "spree_products"."id" = $1  [["id", 7]]
+  [1m[36mSpree::Taxon Load (0.2ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1[0m  [["product_id", 7]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:04:10.723700' WHERE 1=0
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:04:10.724487' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)[0m
+  [1m[35m (12.4ms)[0m  COMMIT
+  [1m[36mSpree::Product Load (0.2ms)[0m  [1mSELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1[0m  [["name", "Avena"]]
+  [1m[35mSpree::Variant Load (0.2ms)[0m  SELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1  [["product_id", 8], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/2888232f1f713d367b2587fb3d3f481020170615-26815-pu4cnd.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2888232f1f713d367b2587fb3d3f481020170615-26815-b4ab8y.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/2888232f1f713d367b2587fb3d3f481020170615-26815-b4ab8y.jpg[0]'
+Command :: convert '/tmp/2888232f1f713d367b2587fb3d3f481020170615-26815-b4ab8y.jpg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/281c0f1091f39d8a602b86d4b9bafcb220170615-26815-9ksd63'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2888232f1f713d367b2587fb3d3f481020170615-26815-b4ab8y.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/2888232f1f713d367b2587fb3d3f481020170615-26815-b4ab8y.jpg[0]'
+Command :: convert '/tmp/2888232f1f713d367b2587fb3d3f481020170615-26815-b4ab8y.jpg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/281c0f1091f39d8a602b86d4b9bafcb220170615-26815-1p8w3xt'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2888232f1f713d367b2587fb3d3f481020170615-26815-b4ab8y.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/2888232f1f713d367b2587fb3d3f481020170615-26815-b4ab8y.jpg[0]'
+Command :: convert '/tmp/2888232f1f713d367b2587fb3d3f481020170615-26815-b4ab8y.jpg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/281c0f1091f39d8a602b86d4b9bafcb220170615-26815-lqnki0'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2888232f1f713d367b2587fb3d3f481020170615-26815-b4ab8y.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/2888232f1f713d367b2587fb3d3f481020170615-26815-b4ab8y.jpg[0]'
+Command :: convert '/tmp/2888232f1f713d367b2587fb3d3f481020170615-26815-b4ab8y.jpg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/281c0f1091f39d8a602b86d4b9bafcb220170615-26815-ceb4n9'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/tmp/2888232f1f713d367b2587fb3d3f481020170615-26815-fz3g1f.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2888232f1f713d367b2587fb3d3f481020170615-26815-b4ab8y.jpg[0]' 2>/dev/null
+  [1m[35mSpree::Asset Load (0.2ms)[0m  SELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1  [["viewable_id", 8], ["viewable_type", "Spree::Variant"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["type", "Spree::Image"], ["attachment_file_name", "avena.jpg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 14765], ["attachment_updated_at", "2017-06-16 02:04:10.745093"], ["viewable_id", 8], ["viewable_type", "Spree::Variant"], ["attachment_width", 256], ["attachment_height", 256], ["created_at", "2017-06-16 02:04:10.836602"], ["updated_at", "2017-06-16 02:04:10.836602"], ["position", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:04:10.839016' WHERE "spree_variants"."id" = $1  [["id", 8]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "spree_products" SET "updated_at" = '2017-06-16 02:04:10.840219' WHERE "spree_products"."id" = $1[0m  [["id", 8]]
+  [1m[35mSpree::Taxon Load (0.1ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1  [["product_id", 8]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:04:10.842242' WHERE 1=0[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:04:10.843025' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)
+  [1m[36m (16.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSpree::Product Load (0.2ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", "Mantequilla"]]
+  [1m[36mSpree::Variant Load (0.2ms)[0m  [1mSELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1[0m  [["product_id", 9], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/2679ec2987c0df252543608e5889e84920170615-26815-s87oww.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2679ec2987c0df252543608e5889e84920170615-26815-1e7li9.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/2679ec2987c0df252543608e5889e84920170615-26815-1e7li9.jpeg[0]'
+Command :: convert '/tmp/2679ec2987c0df252543608e5889e84920170615-26815-1e7li9.jpeg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/39e2d82ef130f6f3d721b287f4bbf5b520170615-26815-tx19s6'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2679ec2987c0df252543608e5889e84920170615-26815-1e7li9.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/2679ec2987c0df252543608e5889e84920170615-26815-1e7li9.jpeg[0]'
+Command :: convert '/tmp/2679ec2987c0df252543608e5889e84920170615-26815-1e7li9.jpeg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/39e2d82ef130f6f3d721b287f4bbf5b520170615-26815-zxijp'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2679ec2987c0df252543608e5889e84920170615-26815-1e7li9.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/2679ec2987c0df252543608e5889e84920170615-26815-1e7li9.jpeg[0]'
+Command :: convert '/tmp/2679ec2987c0df252543608e5889e84920170615-26815-1e7li9.jpeg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/39e2d82ef130f6f3d721b287f4bbf5b520170615-26815-16mqg80'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2679ec2987c0df252543608e5889e84920170615-26815-1e7li9.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/2679ec2987c0df252543608e5889e84920170615-26815-1e7li9.jpeg[0]'
+Command :: convert '/tmp/2679ec2987c0df252543608e5889e84920170615-26815-1e7li9.jpeg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/39e2d82ef130f6f3d721b287f4bbf5b520170615-26815-dmyepc'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/2679ec2987c0df252543608e5889e84920170615-26815-bqremj.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2679ec2987c0df252543608e5889e84920170615-26815-1e7li9.jpeg[0]' 2>/dev/null
+  [1m[36mSpree::Asset Load (0.2ms)[0m  [1mSELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1[0m  [["viewable_id", 9], ["viewable_type", "Spree::Variant"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["type", "Spree::Image"], ["attachment_file_name", "mantequilla.jpeg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 10752], ["attachment_updated_at", "2017-06-16 02:04:10.866949"], ["viewable_id", 9], ["viewable_type", "Spree::Variant"], ["attachment_width", 300], ["attachment_height", 231], ["created_at", "2017-06-16 02:04:10.953882"], ["updated_at", "2017-06-16 02:04:10.953882"], ["position", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:04:10.956280' WHERE "spree_variants"."id" = $1[0m  [["id", 9]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "spree_products" SET "updated_at" = '2017-06-16 02:04:10.957374' WHERE "spree_products"."id" = $1  [["id", 9]]
+  [1m[36mSpree::Taxon Load (0.1ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1[0m  [["product_id", 9]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:04:10.959379' WHERE 1=0
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:04:10.960128' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)[0m
+  [1m[35m (20.3ms)[0m  COMMIT
+  [1m[36mSpree::Product Load (0.2ms)[0m  [1mSELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1[0m  [["name", "Azucar"]]
+  [1m[35mSpree::Variant Load (0.2ms)[0m  SELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1  [["product_id", 10], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/015598e271a567d3053bc48a4c48e27220170615-26815-owbcc8.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/015598e271a567d3053bc48a4c48e27220170615-26815-13sber1.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/015598e271a567d3053bc48a4c48e27220170615-26815-13sber1.jpg[0]'
+Command :: convert '/tmp/015598e271a567d3053bc48a4c48e27220170615-26815-13sber1.jpg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/ca657298a34d088d8ea4264842e7b01f20170615-26815-abpfm3'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/015598e271a567d3053bc48a4c48e27220170615-26815-13sber1.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/015598e271a567d3053bc48a4c48e27220170615-26815-13sber1.jpg[0]'
+Command :: convert '/tmp/015598e271a567d3053bc48a4c48e27220170615-26815-13sber1.jpg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/ca657298a34d088d8ea4264842e7b01f20170615-26815-a98c7e'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/015598e271a567d3053bc48a4c48e27220170615-26815-13sber1.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/015598e271a567d3053bc48a4c48e27220170615-26815-13sber1.jpg[0]'
+Command :: convert '/tmp/015598e271a567d3053bc48a4c48e27220170615-26815-13sber1.jpg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/ca657298a34d088d8ea4264842e7b01f20170615-26815-1ln8oat'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/015598e271a567d3053bc48a4c48e27220170615-26815-13sber1.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/015598e271a567d3053bc48a4c48e27220170615-26815-13sber1.jpg[0]'
+Command :: convert '/tmp/015598e271a567d3053bc48a4c48e27220170615-26815-13sber1.jpg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/ca657298a34d088d8ea4264842e7b01f20170615-26815-1v9928t'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/tmp/015598e271a567d3053bc48a4c48e27220170615-26815-4fxrrl.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/015598e271a567d3053bc48a4c48e27220170615-26815-13sber1.jpg[0]' 2>/dev/null
+  [1m[35mSpree::Asset Load (0.2ms)[0m  SELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1  [["viewable_id", 10], ["viewable_type", "Spree::Variant"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["type", "Spree::Image"], ["attachment_file_name", "azucar.jpg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 11350], ["attachment_updated_at", "2017-06-16 02:04:10.988861"], ["viewable_id", 10], ["viewable_type", "Spree::Variant"], ["attachment_width", 300], ["attachment_height", 300], ["created_at", "2017-06-16 02:04:11.080201"], ["updated_at", "2017-06-16 02:04:11.080201"], ["position", 1]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:04:11.082512' WHERE "spree_variants"."id" = $1  [["id", 10]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "spree_products" SET "updated_at" = '2017-06-16 02:04:11.083603' WHERE "spree_products"."id" = $1[0m  [["id", 10]]
+  [1m[35mSpree::Taxon Load (0.1ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1  [["product_id", 10]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:04:11.085261' WHERE 1=0[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:04:11.085984' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)
+  [1m[36m (15.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mSpree::Product Load (0.1ms)[0m  SELECT  "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."name" = $1 LIMIT 1  [["name", "Harina Integral"]]
+  [1m[36mSpree::Variant Load (0.1ms)[0m  [1mSELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1[0m  [["product_id", 11], ["is_master", "t"]]
+Command :: file -b --mime '/tmp/c545f658c292160f2517498b6ef06c9220170615-26815-stegu5.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/c545f658c292160f2517498b6ef06c9220170615-26815-1kp45b6.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/c545f658c292160f2517498b6ef06c9220170615-26815-1kp45b6.jpg[0]'
+Command :: convert '/tmp/c545f658c292160f2517498b6ef06c9220170615-26815-1kp45b6.jpg[0]' -auto-orient -resize "48x48>" -strip -auto-orient -colorspace sRGB '/tmp/210abd758badb6c89901f4945f52c6af20170615-26815-lyp4en'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/c545f658c292160f2517498b6ef06c9220170615-26815-1kp45b6.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/c545f658c292160f2517498b6ef06c9220170615-26815-1kp45b6.jpg[0]'
+Command :: convert '/tmp/c545f658c292160f2517498b6ef06c9220170615-26815-1kp45b6.jpg[0]' -auto-orient -resize "100x100>" -strip -auto-orient -colorspace sRGB '/tmp/210abd758badb6c89901f4945f52c6af20170615-26815-l67jo9'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/c545f658c292160f2517498b6ef06c9220170615-26815-1kp45b6.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/c545f658c292160f2517498b6ef06c9220170615-26815-1kp45b6.jpg[0]'
+Command :: convert '/tmp/c545f658c292160f2517498b6ef06c9220170615-26815-1kp45b6.jpg[0]' -auto-orient -resize "240x240>" -strip -auto-orient -colorspace sRGB '/tmp/210abd758badb6c89901f4945f52c6af20170615-26815-1515q2j'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/c545f658c292160f2517498b6ef06c9220170615-26815-1kp45b6.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/c545f658c292160f2517498b6ef06c9220170615-26815-1kp45b6.jpg[0]'
+Command :: convert '/tmp/c545f658c292160f2517498b6ef06c9220170615-26815-1kp45b6.jpg[0]' -auto-orient -resize "600x600>" -strip -auto-orient -colorspace sRGB '/tmp/210abd758badb6c89901f4945f52c6af20170615-26815-8qdqjd'
+  [1m[35m (0.1ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/c545f658c292160f2517498b6ef06c9220170615-26815-8ln7v0.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/c545f658c292160f2517498b6ef06c9220170615-26815-1kp45b6.jpg[0]' 2>/dev/null
+  [1m[36mSpree::Asset Load (0.2ms)[0m  [1mSELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND ("spree_assets"."position" IS NOT NULL)  ORDER BY "spree_assets"."position" DESC LIMIT 1[0m  [["viewable_id", 11], ["viewable_type", "Spree::Variant"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "spree_assets" ("type", "attachment_file_name", "attachment_content_type", "attachment_file_size", "attachment_updated_at", "viewable_id", "viewable_type", "attachment_width", "attachment_height", "created_at", "updated_at", "position") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["type", "Spree::Image"], ["attachment_file_name", "harina.jpg"], ["attachment_content_type", "image/jpeg"], ["attachment_file_size", 54227], ["attachment_updated_at", "2017-06-16 02:04:11.110399"], ["viewable_id", 11], ["viewable_type", "Spree::Variant"], ["attachment_width", 376], ["attachment_height", 376], ["created_at", "2017-06-16 02:04:11.214256"], ["updated_at", "2017-06-16 02:04:11.214256"], ["position", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "spree_variants" SET "updated_at" = '2017-06-16 02:04:11.216415' WHERE "spree_variants"."id" = $1[0m  [["id", 11]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "spree_products" SET "updated_at" = '2017-06-16 02:04:11.217495' WHERE "spree_products"."id" = $1  [["id", 11]]
+  [1m[36mSpree::Taxon Load (0.2ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1[0m  [["product_id", 11]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "spree_taxons" SET "updated_at" = '2017-06-16 02:04:11.219397' WHERE 1=0
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "spree_taxonomies" SET "updated_at" = '2017-06-16 02:04:11.220183' WHERE "spree_taxonomies"."id" IN (SELECT "spree_taxonomies"."id" FROM "spree_taxonomies" WHERE 1=0  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at)[0m
+  [1m[35m (15.2ms)[0m  COMMIT
+  [1m[36mSpree::Preference Load (0.4ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1  ORDER BY "spree_preferences"."id" ASC LIMIT 1[0m  [["key", "spree/app_configuration/currency"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSpree::Preference Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "spree_preferences" WHERE ("spree_preferences"."key" = 'spree/app_configuration/currency' AND "spree_preferences"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+DEPRECATION WARNING: Spree::User must include Spree::UserMethods. (called from block in <top (required)> at /home/zuri/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/bundler/gems/spree-5384ab6e8318/core/config/initializers/user_class_extensions.rb:7)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-15 22:04:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Spree::HomeController#index as HTML
+  [1m[35mSpree::Preference Load (0.3ms)[0m  SELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT 1  [["key", "spree/frontend_configuration/locale"]]
+  [1m[36mSpree::Taxonomy Load (0.6ms)[0m  [1mSELECT "spree_taxonomies".* FROM "spree_taxonomies"  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at[0m
+  Rendered spree/shared/_taxonomies.html.erb (2.2ms)
+  [1m[35m (86.6ms)[0m  SELECT COUNT(DISTINCT count_column) FROM (SELECT  DISTINCT "spree_products"."id" AS count_column FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".discontinue_on IS NULL or "spree_products".discontinue_on >= '2017-06-16 02:04:25.517923') AND ("spree_products".discontinue_on IS NULL or "spree_products".discontinue_on >= '2017-06-16 02:04:25.518221') AND ("spree_products".available_on <= '2017-06-16 02:04:25.518204') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'CLP' LIMIT 12 OFFSET 0) subquery_for_count  [["is_master", "t"]]
+  [1m[36mSQL (1.4ms)[0m  [1mSELECT  DISTINCT "spree_products"."id" FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL LEFT OUTER JOIN "spree_product_promotion_rules" ON "spree_product_promotion_rules"."product_id" = "spree_products"."id" LEFT OUTER JOIN "spree_promotion_rules" ON "spree_promotion_rules"."id" = "spree_product_promotion_rules"."promotion_rule_id" LEFT OUTER JOIN "spree_promotions" ON "spree_promotions"."id" = "spree_promotion_rules"."promotion_id" AND "spree_promotions"."advertise" = $2 AND (spree_promotions.starts_at IS NULL OR spree_promotions.starts_at < '2017-06-16 02:04:25.674618') AND (spree_promotions.expires_at IS NULL OR spree_promotions.expires_at > '2017-06-16 02:04:25.674800') WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".discontinue_on IS NULL or "spree_products".discontinue_on >= '2017-06-16 02:04:25.517923') AND ("spree_products".discontinue_on IS NULL or "spree_products".discontinue_on >= '2017-06-16 02:04:25.518221') AND ("spree_products".available_on <= '2017-06-16 02:04:25.518204') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'CLP' LIMIT 12 OFFSET 0[0m  [["is_master", "t"], ["advertise", "t"]]
+  [1m[35m (0.9ms)[0m  SELECT DISTINCT MAX("spree_products"."updated_at") FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL LEFT OUTER JOIN "spree_product_promotion_rules" ON "spree_product_promotion_rules"."product_id" = "spree_products"."id" LEFT OUTER JOIN "spree_promotion_rules" ON "spree_promotion_rules"."id" = "spree_product_promotion_rules"."promotion_rule_id" LEFT OUTER JOIN "spree_promotions" ON "spree_promotions"."id" = "spree_promotion_rules"."promotion_id" AND "spree_promotions"."advertise" = $2 AND (spree_promotions.starts_at IS NULL OR spree_promotions.starts_at < '2017-06-16 02:04:25.678618') AND (spree_promotions.expires_at IS NULL OR spree_promotions.expires_at > '2017-06-16 02:04:25.678753') WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".discontinue_on IS NULL or "spree_products".discontinue_on >= '2017-06-16 02:04:25.517923') AND ("spree_products".discontinue_on IS NULL or "spree_products".discontinue_on >= '2017-06-16 02:04:25.518221') AND ("spree_products".available_on <= '2017-06-16 02:04:25.518204') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'CLP' AND "spree_products"."id" IN (6, 8, 1, 2, 3, 10, 11, 4, 5, 9, 7)  [["is_master", "t"], ["advertise", "t"]]
+  [1m[36mSpree::Store Load (0.6ms)[0m  [1mSELECT  "spree_stores".* FROM "spree_stores" WHERE (url like '%localhost%')  ORDER BY "spree_stores"."id" ASC LIMIT 1[0m
+  [1m[35mSpree::Order Load (0.7ms)[0m  SELECT  "spree_orders".* FROM "spree_orders" WHERE "spree_orders"."completed_at" IS NULL AND "spree_orders"."currency" = $1 AND "spree_orders"."guest_token" = $2 AND "spree_orders"."store_id" = $3 LIMIT 1  [["currency", "CLP"], ["guest_token", "HMTycHjVAmNUoQJZyxhx_g1496351751559"], ["store_id", 1]]
+  [1m[36mSpree::LineItem Load (0.6ms)[0m  [1mSELECT "spree_line_items".* FROM "spree_line_items" WHERE "spree_line_items"."order_id" IN (1)  ORDER BY "spree_line_items"."created_at" ASC[0m
+  [1m[35mSpree::Variant Load (0.4ms)[0m  SELECT "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."id" IN (4, 10)
+  [1m[36mSpree::Image Load (1.1ms)[0m  [1mSELECT "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."type" IN ('Spree::Image') AND "spree_assets"."viewable_type" = 'Spree::Variant' AND "spree_assets"."viewable_id" IN (4, 10)  ORDER BY "spree_assets"."position" ASC[0m
+  [1m[35mSpree::OptionValueVariant Load (0.4ms)[0m  SELECT "spree_option_value_variants".* FROM "spree_option_value_variants" WHERE "spree_option_value_variants"."variant_id" IN (4, 10)
+  [1m[36mSpree::Product Load (0.4ms)[0m  [1mSELECT "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."id" IN (4, 10)[0m
+  [1m[35mSpree::Adjustment Load (0.7ms)[0m  SELECT "spree_adjustments".* FROM "spree_adjustments" WHERE "spree_adjustments"."adjustable_type" = 'Spree::Order' AND "spree_adjustments"."adjustable_id" IN (1)  ORDER BY "spree_adjustments"."created_at" ASC
+  [1m[36mSpree::Zone Load (0.3ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", "t"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36m (0.8ms)[0m  [1mSELECT DISTINCT COUNT(DISTINCT "spree_products"."id") FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".discontinue_on IS NULL or "spree_products".discontinue_on >= '2017-06-16 02:04:25.517923') AND ("spree_products".discontinue_on IS NULL or "spree_products".discontinue_on >= '2017-06-16 02:04:25.518221') AND ("spree_products".available_on <= '2017-06-16 02:04:25.518204') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'CLP'[0m  [["is_master", "t"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(DISTINCT count_column) FROM (SELECT  DISTINCT "spree_products"."id" AS count_column FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".discontinue_on IS NULL or "spree_products".discontinue_on >= '2017-06-16 02:04:25.517923') AND ("spree_products".discontinue_on IS NULL or "spree_products".discontinue_on >= '2017-06-16 02:04:25.518221') AND ("spree_products".available_on <= '2017-06-16 02:04:25.518204') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'CLP' LIMIT 12 OFFSET 0) subquery_for_count  [["is_master", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(DISTINCT count_column) FROM (SELECT  DISTINCT "spree_products"."id" AS count_column FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".discontinue_on IS NULL or "spree_products".discontinue_on >= '2017-06-16 02:04:25.517923') AND ("spree_products".discontinue_on IS NULL or "spree_products".discontinue_on >= '2017-06-16 02:04:25.518221') AND ("spree_products".available_on <= '2017-06-16 02:04:25.518204') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'CLP' LIMIT 12 OFFSET 0) subquery_for_count[0m  [["is_master", true]]
+  [1m[35mSpree::Product Load (1.1ms)[0m  SELECT  DISTINCT "spree_products".* FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".discontinue_on IS NULL or "spree_products".discontinue_on >= '2017-06-16 02:04:25.517923') AND ("spree_products".discontinue_on IS NULL or "spree_products".discontinue_on >= '2017-06-16 02:04:25.518221') AND ("spree_products".available_on <= '2017-06-16 02:04:25.518204') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'CLP' LIMIT 12 OFFSET 0  [["is_master", "t"]]
+  [1m[36mSpree::Variant Load (0.3ms)[0m  [1mSELECT "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."is_master" = $1 AND "spree_variants"."product_id" IN (5, 1, 2, 6, 4, 10, 3, 8, 11, 7, 9)[0m  [["is_master", "t"]]
+  [1m[35mSpree::Price Load (0.3ms)[0m  SELECT "spree_prices".* FROM "spree_prices" WHERE "spree_prices"."deleted_at" IS NULL AND "spree_prices"."variant_id" IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+  [1m[36mSpree::Image Load (0.7ms)[0m  [1mSELECT "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."type" IN ('Spree::Image') AND "spree_assets"."viewable_type" = 'Spree::Variant' AND "spree_assets"."viewable_id" IN (5, 1, 2, 6, 4, 10, 3, 8, 11, 7, 9)  ORDER BY "spree_assets"."position" ASC[0m
+  [1m[35mSpree::ProductPromotionRule Load (0.4ms)[0m  SELECT "spree_product_promotion_rules".* FROM "spree_product_promotion_rules" WHERE "spree_product_promotion_rules"."product_id" IN (5, 1, 2, 6, 4, 10, 3, 8, 11, 7, 9)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mSpree::TaxCategory Load (0.3ms)[0m  [1mSELECT  "spree_tax_categories".* FROM "spree_tax_categories" WHERE "spree_tax_categories"."deleted_at" IS NULL AND "spree_tax_categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_tax_categories".* FROM "spree_tax_categories" WHERE "spree_tax_categories"."deleted_at" IS NULL AND "spree_tax_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_tax_categories".* FROM "spree_tax_categories" WHERE "spree_tax_categories"."deleted_at" IS NULL AND "spree_tax_categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_tax_categories".* FROM "spree_tax_categories" WHERE "spree_tax_categories"."deleted_at" IS NULL AND "spree_tax_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_tax_categories".* FROM "spree_tax_categories" WHERE "spree_tax_categories"."deleted_at" IS NULL AND "spree_tax_categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_tax_categories".* FROM "spree_tax_categories" WHERE "spree_tax_categories"."deleted_at" IS NULL AND "spree_tax_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_tax_categories".* FROM "spree_tax_categories" WHERE "spree_tax_categories"."deleted_at" IS NULL AND "spree_tax_categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_tax_categories".* FROM "spree_tax_categories" WHERE "spree_tax_categories"."deleted_at" IS NULL AND "spree_tax_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "spree_tax_categories".* FROM "spree_tax_categories" WHERE "spree_tax_categories"."deleted_at" IS NULL AND "spree_tax_categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_tax_categories".* FROM "spree_tax_categories" WHERE "spree_tax_categories"."deleted_at" IS NULL AND "spree_tax_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1[0m  [["default_tax", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "spree_zones".* FROM "spree_zones" WHERE "spree_zones"."default_tax" = $1 LIMIT 1  [["default_tax", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "spree_tax_categories".* FROM "spree_tax_categories" WHERE "spree_tax_categories"."deleted_at" IS NULL AND "spree_tax_categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered spree/shared/_products.html.erb (125.6ms)
+  Rendered /home/zuri/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/bundler/gems/spree-5384ab6e8318/frontend/app/views/spree/home/index.html.erb within spree/layouts/spree_application (503.2ms)
+  Rendered spree/shared/_head.html.erb (4346.6ms)
+  Rendered spree/shared/_google_analytics.js.erb (1.9ms)
+[1;32mDeface:[0m 1 overrides found for 'spree/shared/_nav_bar'
+[1;32mDeface:[0m 'auth_shared_login_bar' matched 1 times with 'li#search-bar'
+  [1m[35m (0.5ms)[0m  SELECT MAX("spree_taxons"."updated_at") FROM "spree_taxons" WHERE "spree_taxons"."parent_id" IS NULL
+  [1m[36mSpree::Taxon Load (0.3ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" WHERE "spree_taxons"."parent_id" IS NULL  ORDER BY "spree_taxons"."lft"[0m
+  Rendered spree/shared/_search.html.erb (44.0ms)
+  Rendered spree/shared/_nav_bar.html.erb (46.2ms)
+  Rendered spree/shared/_main_nav_bar.html.erb (0.5ms)
+  Rendered spree/shared/_header.html.erb (56.3ms)
+  Rendered spree/shared/_sidebar.html.erb (0.3ms)
+Completed 200 OK in 5017ms (Views: 4811.4ms | ActiveRecord: 116.2ms)
+
+
+Started GET "/assets/spree/frontend/all-2e4fd85136dbd1bf159d7daf97716aaf0d181cf5c0de7f20073963ababfab6a4.css" for 127.0.0.1 at 2017-06-15 22:04:30 -0400
+
+
+Started GET "/assets/spree/frontend/all-8c28a34d39e86a7b1232f5bb4b135a7da6788aa4e77905d977028810c894af62.js" for 127.0.0.1 at 2017-06-15 22:04:30 -0400
+
+
+Started GET "/cart_link" for 127.0.0.1 at 2017-06-15 22:04:30 -0400
+Processing by Spree::StoreController#cart_link as */*
+  [1m[35mSpree::Preference Load (0.4ms)[0m  SELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT 1  [["key", "spree/frontend_configuration/locale"]]
+  [1m[36mSpree::Store Load (0.5ms)[0m  [1mSELECT  "spree_stores".* FROM "spree_stores" WHERE (url like '%localhost%')  ORDER BY "spree_stores"."id" ASC LIMIT 1[0m
+  [1m[35mSpree::Order Load (1.1ms)[0m  SELECT  "spree_orders".* FROM "spree_orders" WHERE "spree_orders"."completed_at" IS NULL AND "spree_orders"."currency" = $1 AND "spree_orders"."guest_token" = $2 AND "spree_orders"."store_id" = $3 LIMIT 1  [["currency", "CLP"], ["guest_token", "HMTycHjVAmNUoQJZyxhx_g1496351751559"], ["store_id", 1]]
+  [1m[36mSpree::LineItem Load (0.5ms)[0m  [1mSELECT "spree_line_items".* FROM "spree_line_items" WHERE "spree_line_items"."order_id" IN (1)  ORDER BY "spree_line_items"."created_at" ASC[0m
+  [1m[35mSpree::Variant Load (0.4ms)[0m  SELECT "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."id" IN (4, 10)
+  [1m[36mSpree::Image Load (0.5ms)[0m  [1mSELECT "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."type" IN ('Spree::Image') AND "spree_assets"."viewable_type" = 'Spree::Variant' AND "spree_assets"."viewable_id" IN (4, 10)  ORDER BY "spree_assets"."position" ASC[0m
+  [1m[35mSpree::OptionValueVariant Load (0.3ms)[0m  SELECT "spree_option_value_variants".* FROM "spree_option_value_variants" WHERE "spree_option_value_variants"."variant_id" IN (4, 10)
+  [1m[36mSpree::Product Load (0.5ms)[0m  [1mSELECT "spree_products".* FROM "spree_products" WHERE "spree_products"."deleted_at" IS NULL AND "spree_products"."id" IN (4, 10)[0m
+  Rendered spree/shared/_link_to_cart.html.erb (20.4ms)
+  Couldn't find template for digesting: store/cart_link
+Completed 200 OK in 47ms (Views: 28.8ms | ActiveRecord: 4.3ms)
