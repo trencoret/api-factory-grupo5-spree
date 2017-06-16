@@ -42,8 +42,8 @@ class ApplicationController < ActionController::Base
 
     response = HTTP.headers(:accept => "application/json").put(url_final, :json => { :id => id, :cliente => cliente, :precio => precio, :cantidad => cantidad, :sku => sku})
     #end
-
-
+    puts "AAAAAAAAAAAAAAAA"
+    puts response
     resultadoEnJson = JSON.parse(response)
     return resultadoEnJson
   end

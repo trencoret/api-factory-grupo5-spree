@@ -82,7 +82,7 @@ module Spree
         #   #DEV: 590baa00d6b4ec0004902466
     #   #PROD: 5910c0910e42840004f6e684
 
-      respuesta = crearBoleta("5910c0910e42840004f6e684", cliente, precio_final, quantity, sku)
+      respuesta = crearBoleta("590baa00d6b4ec0004902466", cliente, precio_final, quantity, sku)
       puts 'pago respuesta'
       puts respuesta["_id"]
       
