@@ -87,16 +87,16 @@ module Spree
       puts respuesta["_id"]
       
       #Cuando este arriba
-      url_ok = "http%3A%2F%2Fintegra17-5.ing.puc.cl/tienda/ok/"
+      url_ok = "http%3A%2F%2Fintegra17-5.ing.puc.cl/tienda/ok/"+respuesta['_id'].to_s
       # Ahora para probar con local host
       # url_ok = 'http%3A%2F%2Flocalhost:3000/tienda/ok/'+respuesta['_id']
       
       
       # Cuando este arriba
-      url_fail = "http%3A%2F%2Fintegra17-5.ing.puc.cl/tienda/fail/"
-      # Ahora para probar
+      url_fail = "http%3A%2F%2Fintegra17-5.ing.puc.cl/tienda/fail/"+respuesta['_id'].to_s
+      # Ahora para probar 
       # url_fail = 'http%3A%2F%2Flocalhost:3000/tienda/fail/'
-      url = "https://integracion-2017-prod.herokuapp.com/web/pagoenlinea?callbackUrl="+url_ok+"&cancelUrl="+url_fail+"+&boletaId="+respuesta['_id']
+      url = "https://integracion-2017-prod.herokuapp.com/web/pagoenlinea?callbackUrl="+url_ok+"&cancelUrl="+url_fail+"+&boletaId="+respuesta['_id'].to_s
 
       redirect_to url
       end
