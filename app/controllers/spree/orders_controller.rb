@@ -51,6 +51,9 @@ module Spree
       options  = params[:options] || {}
       direccion = params[:direccion]
       cliente = params[:name]
+      code = params[:code]
+      puts "AAAAAAAAAAAAA"
+      puts code
       sku = params[:sku]
       price = params[:price].to_i
       #TODO: Cambiar el precio de venta de los skus
@@ -69,7 +72,20 @@ module Spree
         flash[:error] = error
         redirect_back_or_default(spree.root_path)
       else
+
         precio_final = price*quantity
+        if code != "Ingrese código de promoción" && code != nil && code != ""
+          oferta = HTTP.headers(:accept => "application/json").put("http://integra17-5.ing.puc.cl/promo", 
+            :json => { :code => code, :sku => sku})
+          ofertaP = JSON.parse oferta
+          if ofertaP["existe"]
+            precio_final = ofertaP["precio"].to_f*quantity
+          elsif oferta.code == 401
+            redirect_to expired_path
+          elsif oferta.code == 404
+            redirect_to error_path
+          end
+        end
 
         # Asi estaba antes, ahora para probar comprando de una
 
@@ -149,4 +165,11 @@ module Spree
         end
       end
   end
+
+  def expired
+  end
+
+  def error
+  end
+  
 end

@@ -79,6 +79,12 @@
            <%= text_field_tag :name, "Ingrese su nombre", class: 'title form-control' %>
           </div>
          </div>
+         <div>
+          <h3>Promotional Code</h3>
+          <div>
+            <%= text_field_tag :code, "Ingrese código de promoción", class: 'title form-control' %>
+          </div>
+        </div>
 
 
 
@@ -91,8 +97,8 @@
                 <%= number_field_tag :quantity, 1, class: 'title form-control', min: 1, max: getStockProducto(@product.sku) %>
                 <span class="input-group-btn">
                   <!--<%= button_tag class: 'btn btn-success', id: 'add-to-cart-button', type: :submit do %>
-                    <%= Spree.t(:add_to_cart) %>
-                  <% end %> -->
+                    <%= Spree.t(:add_to_cart) %> -->
+                  <% end %>
                   <%= button_tag class: 'btn btn-success', id: 'add-to-cart-button', type: :submit do %>
                   Buy Now
                 <% end %>

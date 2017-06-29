@@ -31,4 +31,8 @@ Rails.application.routes.draw do
   get '/content/cvv', to: 'content#cvv', as: :cvv
   get '/content/*path', to: 'content#show', as: :content
   get '/cart_link', to: 'store#cart_link', as: :cart_link
+
+  get '/expired', to: 'orders#expired'
+  get '/error', to: 'orders#error'
+
 end
