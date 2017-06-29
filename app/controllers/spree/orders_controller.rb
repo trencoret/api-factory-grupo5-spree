@@ -82,8 +82,10 @@ module Spree
             precio_final = ofertaP["precio"].to_f*quantity
           elsif oferta.code == 401
             redirect_to expired_path
+            return
           elsif oferta.code == 404
             redirect_to error_path
+            return
           end
         end
 
@@ -171,5 +173,5 @@ module Spree
 
   def error
   end
-  
+
 end
