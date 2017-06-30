@@ -81,10 +81,10 @@ module Spree
           if ofertaP["existe"]
             precio_final = ofertaP["precio"].to_f*quantity
           elsif oferta.code == 401
-            redirect_to expired_path
+            redirect_to "http://stark-garden-87198.herokuapp.com/expired"
             return
           elsif oferta.code == 404
-            redirect_to error_path
+            redirect_to "http://stark-garden-87198.herokuapp.com/notfound"
             return
           end
         end
