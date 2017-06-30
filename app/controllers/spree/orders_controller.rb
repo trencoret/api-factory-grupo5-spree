@@ -149,6 +149,12 @@ module Spree
       end
     end
 
+  def expired
+  end
+
+  def error
+  end
+
     private
 
       def order_params
@@ -166,12 +172,6 @@ module Spree
           redirect_to root_path and return
         end
       end
-  end
-
-  def expired
-  end
-
-  def error
   end
 
 end
