@@ -152,7 +152,7 @@ module Spree
   def expired
   end
 
-  def error
+  def notfound
   end
 
     private

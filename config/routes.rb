@@ -33,6 +33,6 @@ Rails.application.routes.draw do
   get '/cart_link', to: 'store#cart_link', as: :cart_link
 
   get '/expired', to: 'orders#expired'
-  get '/notfound', to: 'orders#error'
+  get '/notfound', to: 'orders#notfound'
 
 end
