@@ -16,6 +16,9 @@ Rails.application.routes.draw do
 
   get '/orders/populate', to: 'orders#populate_redirect'
 
+  get '/expired', to: 'orders#expired'
+  get '/notfound', to: 'orders#notfound'
+
   resources :orders, except: [:index, :new, :create, :destroy] do
     post :populate, on: :collection
   end
@@ -32,7 +35,6 @@ Rails.application.routes.draw do
   get '/content/*path', to: 'content#show', as: :content
   get '/cart_link', to: 'store#cart_link', as: :cart_link
 
-  get '/expired', to: 'orders#expired'
-  get '/notfound', to: 'orders#notfound'
+  
 
 end

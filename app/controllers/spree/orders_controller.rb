@@ -121,7 +121,13 @@ module Spree
     
     end
 
-    
+    def expired
+      Rails.logger.debug "Entro a expired"
+    end
+
+    def notfound
+      Rails.logger.debug "Entro a notfound"
+    end
     
     def empty
       if @order = current_order
@@ -149,11 +155,7 @@ module Spree
       end
     end
 
-  def expired
-  end
-
-  def notfound
-  end
+  
 
     private
 
