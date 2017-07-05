@@ -7,7 +7,7 @@ module Spree
     before_action :check_authorization
     rescue_from ActiveRecord::RecordNotFound, :with => :render_404
     helper 'spree/products', 'spree/orders'
-    
+
 
     respond_to :html
 
@@ -58,6 +58,15 @@ module Spree
       price = params[:price].to_i
       #TODO: Cambiar el precio de venta de los skus
 
+
+      # respuesta = revisar_codigo(code)
+      # if respuesta.code == 200
+      #   promos = respuesta.parse
+      #   promos.each do |promo|
+      #     price = promo["precio"]
+      #   end
+      # end
+
       # 2,147,483,647 is crazy. See issue #2695.
       if quantity.between?(1, 2_147_483_647)
         order.contents.add(variant, quantity, options)
@@ -75,7 +84,7 @@ module Spree
 
         precio_final = price*quantity
         if code != "Ingrese código de promoción" && code != nil && code != ""
-          oferta = HTTP.headers(:accept => "application/json").put("http://integra17-5.ing.puc.cl/promo", 
+          oferta = HTTP.headers(:accept => "application/json").get("http://localhost:3000/promo",
             :json => { :code => code, :sku => sku})
           ofertaP = JSON.parse oferta
           if ofertaP["existe"]
@@ -103,24 +112,33 @@ module Spree
       respuesta = crearBoleta("5910c0910e42840004f6e684", cliente, precio_final, quantity, sku)
       puts 'pago respuesta'
       puts respuesta["_id"]
-      
+
       #Cuando este arriba
       url_ok = "http%3A%2F%2Fintegra17-5.ing.puc.cl/tienda/ok/"+respuesta['_id'].to_s
       # Ahora para probar con local host
       # url_ok = 'http%3A%2F%2Flocalhost:3000/tienda/ok/'+respuesta['_id']
-      
-      
+
+
       # Cuando este arriba
       url_fail = "http%3A%2F%2Fintegra17-5.ing.puc.cl/tienda/fail/"+respuesta['_id'].to_s
-      # Ahora para probar 
+      # Ahora para probar
       # url_fail = 'http%3A%2F%2Flocalhost:3000/tienda/fail/'
       url = "https://integracion-2017-prod.herokuapp.com/web/pagoenlinea?callbackUrl="+url_ok+"&cancelUrl="+url_fail+"+&boletaId="+respuesta['_id'].to_s
 
       redirect_to url
       end
-    
+
     end
 
+
+    def revisar_codigo(code)
+      route = "http://integra17-5.ing.puc.cl/promo/" + code
+      response =  HTTP.get(route )
+    end
+
+    def new_price
+
+    end
     def expired
       Rails.logger.debug "Entro a expired"
     end
@@ -128,7 +146,7 @@ module Spree
     def notfound
       Rails.logger.debug "Entro a notfound"
     end
-    
+
     def empty
       if @order = current_order
         @order.empty!
@@ -155,7 +173,7 @@ module Spree
       end
     end
 
-  
+
 
     private
 
