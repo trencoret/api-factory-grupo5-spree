@@ -84,7 +84,7 @@ module Spree
 
         precio_final = price*quantity
         if code != "Ingrese código de promoción" && code != nil && code != ""
-          oferta = HTTP.headers(:accept => "application/json").get("http://localhost:3000/promo",
+          oferta = HTTP.headers(:accept => "application/json").get("http://integra17-5.ing.puc.cl/promo",
             :json => { :code => code, :sku => sku})
           ofertaP = JSON.parse oferta
           if ofertaP["existe"]
